@@ -28,7 +28,7 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     
     var modelName = window.location.hash;
     if (modelName.length < 1) {
-        modelName = "gearbox_assy.gltf";
+        modelName = "Duplex_A_20110907_optimized";
     } else {
         modelName = modelName.substr(1);
     }
