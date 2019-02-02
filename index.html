@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Schueco BE5 Hackdays
     </title>
+    <!-- Latest compiled and minified CSS -->
 
-    <script src="http://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="ownStyle.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" charset="utf-8">
-
         /**
          * A class which represents a property (e.g. a building)
          */
@@ -28,7 +39,7 @@
 
                 let self = this;
 
-                if (!propertyId || propertyId === ""){
+                if (!propertyId || propertyId === "") {
                     this._propertyId = 0;
                 } else {
                     this._propertyId = propertyId;
@@ -52,7 +63,7 @@
                     }
 
                     self._history.push({
-                        timestamp:new Date(),
+                        timestamp: new Date(),
                         type: message.value_name,
                         payload: message
                     });
@@ -61,7 +72,8 @@
                 };
 
                 this._webSocket.onopen = function () {
-                    console.log("Websocket connection to property " + self._propertyId + " is open. Sending init message...");
+                    console.log("Websocket connection to property " + self._propertyId +
+                        " is open. Sending init message...");
 
                     let initializeConnectionMessage = {
                         "type": "connection_request",
@@ -89,7 +101,7 @@
              */
             _registerWaitCallback(valueName, callback) {
                 let callbackList = this._waitCallbacks[valueName];
-                if (!callbackList){
+                if (!callbackList) {
                     this._waitCallbacks[valueName] = [];
                 }
                 this._waitCallbacks[valueName].push(callback);
@@ -113,7 +125,7 @@
                 var changeMessageJson = JSON.stringify(changeMessage);
                 this._webSocket.send(changeMessageJson);
 
-                return new Promise((a,r) => {
+                return new Promise((a, r) => {
                     a();
                     // r();
                 });
@@ -149,7 +161,7 @@
                 },
                 tooltip: {},
                 legend: {
-                    data:[window.chartValueName]
+                    data: [window.chartValueName]
                 },
                 xAxis: {
                     data: axis
@@ -203,18 +215,35 @@
             refresh();
         }
 
-        $(function() {
+        $(function () {
             window.currentProperty = new SchuecoProperty(221);
             window.currentProperty._registerWaitCallback("", o => refresh());
             window.chartValueName = "ambient_temperature";
         });
-
     </script>
 </head>
 
-<body style="font-family:univers,sans-serif;">
-    <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-    <div id="chart" style="width:600px; height:400px;"></div>
+<body clasS="container">
+    <div class="row">
+        <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-12 center">
+            <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+            <div class="col-md-6 col-xs-12">
+                <div id="chart"></div>
+            </div>
+        </div>
+    </div>
     <button onclick="download()">Download</button>
 </body>
+
 </html>

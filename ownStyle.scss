@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    #chart {
+        width: 100%;
+        min-height: 420px;
+    }
+
+    background: #f2f2f2;
+    color: #444;
+
+    img.logo {
+        width: 20%;
+        max-height: auto;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+    }
+}
