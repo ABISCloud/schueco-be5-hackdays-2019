@@ -60,11 +60,19 @@ body {
         padding: unset;
     }
 
+    .mapsWrapper {
+
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
     .statusIndicator {
         text-align: center;
-        width:72px;
-        height:72px;
-        line-height:82px;
+        width: 72px;
+        height: 72px;
+        line-height: 82px;
         border-radius: 50%;
         border: 1px solid grey;
         border-radius: 50%;
@@ -193,6 +201,7 @@ body {
         border: transparent;
         height: 64px;
         line-height: 48px;
+
         &:focus {
             box-shadow: unset !important;
         }
@@ -236,8 +245,13 @@ body {
     }
 
     @keyframes blendIn {
-        from {transform: translateY(-100%);}
-        to {transform: translateY(100%);}
+        from {
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(100%);
+        }
     }
 
     @keyframes indicator {
@@ -245,6 +259,7 @@ body {
             background: #78b928;
             border: #fc0101;
         }
+
         to {
             transform: #fc0101;
             border: #78b928;

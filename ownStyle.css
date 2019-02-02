@@ -61,6 +61,11 @@ body .errorStatus {
   padding: unset;
 }
 
+body .mapsWrapper iframe {
+  width: 100%;
+  height: 400px;
+}
+
 body .statusIndicator {
   text-align: center;
   width: 72px;
