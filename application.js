@@ -1,4 +1,5 @@
 let property = null;
+let time = null;
 let chartArea = null;
 let valueNameSelect = null;
 let selectedSensorName = null;
@@ -6,6 +7,7 @@ let selectedSensor = null;
 
 $(() => {
     property = new Property(221);
+    time = document.getElementById("time");
     chartArea = document.getElementById("chartArea");
     valueNameSelect = document.getElementById("valueNameSelect");
     selectedSensorName = null;
