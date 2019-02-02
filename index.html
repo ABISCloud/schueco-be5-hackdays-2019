@@ -42,24 +42,20 @@
     </div>
     <div class="row bg-light">
         <div class="col-md-12 center">
-<<<<<<< HEAD
             <div class="col-md-6 col-xs-12">
                 <div id="chart"></div>
-=======
-            <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-            <button onclick="addChart()">Add Chart</button>
-            <div id="chartArea" class="col-md-6 col-xs-12">
-
->>>>>>> c1580c5acb5452e2516140173c823449aef26851
-            </div>
+            <div id="chartArea" class="col-md-12 col-xs-12"></div>
         </div>
         <span class="arrowTo">
             <img src="./assets/images/arrow-to.png" alt="arrow" />
         </span>
-        <button class="col-12 btn btn-schuecoGreen" onclick="download()">Download Chart as .csv</button>
+        <div class="row form-group">
+            <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>  
+            <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
+        </div>
     </div>
 
-    <div id="status" class="row bg-light">
+    <div id="status" class="container bg-light">
         <div class="statusWrapper">
             <div class="left">
                 <img src="http://placehold.it/72/72" alt="alt" />
@@ -77,10 +73,8 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-
     <div id="chat">
-        <div class="row">
+        <div class="container">
             <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
                 <div class="panel panel-primary">
                     <div class="panel-collapse collapse" id="collapseOne">
@@ -120,6 +114,4 @@
 <script src="./js/script.js"></script>
 
 </html>
-=======
 </body>
->>>>>>> c1580c5acb5452e2516140173c823449aef26851
