@@ -104,7 +104,10 @@ body {
     }
 
     .liveIndicator {
-        background: #fc0101;
+        background: red;
+        animation: colorFade 6s infinite;
+        //background: #fc0101;
+        //background: #fc0101;
     }
 
     //Status
@@ -296,6 +299,18 @@ body {
 
         to {
             transform: translateY(100%);
+        }
+    }
+
+    @keyframes colorFade {
+        5% {
+            background: green;
+        }
+        50% {
+            background: orange;
+        }
+        75% {
+            background: red;
         }
     }
 
