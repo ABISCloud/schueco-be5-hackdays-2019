@@ -32,6 +32,7 @@ body {
         top: 50px;
         display: block;
         left: 0;
+        margin-bottom: 30%;
     }
 
     .chartWrapper {
@@ -58,6 +59,14 @@ body {
 
     .errorStatus {
         padding: unset;
+    }
+
+    .warningButton {
+        float: right;
+        position: absolute;
+        right: 15px;
+        top: 60%;
+        z-index: 999;
     }
 
     .mapsWrapper {
@@ -170,8 +179,10 @@ body {
         }
 
         .text-muted {
-            right: 1rem;
+            right: 4%;
+            top: -3.8em;
             position: relative;
+            z-index:999;
         }
 
         .panel-body {
@@ -278,6 +289,7 @@ body {
         #chartArea {
             width: 382px;
             right: -15px;
+            margin-bottom: 33% !important;
         }
 
         .chart-widget {
