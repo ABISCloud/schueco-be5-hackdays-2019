@@ -7,9 +7,15 @@
             Schueco BE5 Hackdays
         </title>
 
-        <!-- External dependencies -->
+        <!-- External stylesheets -->
+        <link rel="stylesheet" type="text/css" href="ownStyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+        <!-- External js dependencies -->
         <script src="http://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
         <!-- Classes -->
         <script src="lib/Chart.js" type="text/javascript" charset="utf-8"></script>
@@ -21,10 +27,28 @@
         <script src="application.js" type="text/javascript" charset="utf-8"></script>
     </head>
 
-    <body style="font-family:univers,sans-serif;">
-        <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-        <button onclick="addChart()">Add Chart</button>
-        <div id="chartArea">
+<body class="container">
+    <div class="row">
+        <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-12 center">
+            <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+            <button onclick="addChart()">Add Chart</button>
+            <div id="chartArea" class="col-md-6 col-xs-12">
+
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+<!-- Injects the usabilty for the prototype-->
+<script src="./js/script.js"></script>
 </html>
