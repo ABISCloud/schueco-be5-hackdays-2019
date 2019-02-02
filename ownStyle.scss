@@ -195,6 +195,8 @@ body {
         display: inline-flex;
         width: 92%;
         margin-left: -48px;
+        margin-top: 100px;
+        transform: scale(1.33);
     }
 
     .downloadWrapper {
@@ -210,6 +212,10 @@ body {
         }
         #chartArea {
             display: inline-grid;
+            left: 0;
+        }
+        .chart-widget {
+            transform: scale(1);
         }
     }
 }
