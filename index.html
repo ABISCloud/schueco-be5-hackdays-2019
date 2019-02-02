@@ -26,24 +26,24 @@
 <body class="container">
     <div class="row">
         <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" style="width:200px;">
                 <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
             </a>
-            <select class="pull-right btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            <select class="btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button>-->
         </nav>
     </div>
-    <div class="row">
+    <div class="row bg-light">
         <div class="col-md-12 center">
             <div class="col-md-6 col-xs-12">
                 <div id="chart"></div>
             </div>
         </div>
+        <button class="col-12 btn btn-schuecoGreen" onclick="download()">Download</button>
     </div>
-    <button class="btn btn-schuecoGreen" onclick="download()">Download</button>
     
     <div id="status">
         <div class="panel-heading" id="accordion">
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    <div id="chat">
+    <div id="chat" class="bg-light">
         <div class="row">
             <div class="col-md-12 col-xs-12">
                 <div class="panel panel-primary">
@@ -123,7 +123,7 @@
                         <div class="input-group">
                             <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                             <span class="input-group-btn">
-                                <button class="btn btn-chat btn-sm" id="btn-chat">
+                                <button class="btn btn-schuecoGreen btn-chat btn-sm" id="btn-chat">
                                     Send</button>
                             </span>
                         </div>
