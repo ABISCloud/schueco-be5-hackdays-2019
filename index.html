@@ -40,76 +40,77 @@
             </button>-->
         </nav>
     </div>
+    <div class="chartWrapper col-md-12 col-xs-12">
+            <div id="chartArea" class="col-md-12 col-xs-12"></div>
+        </div>
 
-    <div class="row bg-light">
+    <div class="row bg-light stickyControll">
         <div class="col-12">
-            <div class="chartWrapper col-md-12 col-xs-12">
-                <div id="chartArea" class="col-md-12 col-xs-12"></div>
-            </div>
             <span class="arrowTo">
                 <img src="./assets/images/arrow-to.png" alt="arrow" />
             </span>
-            <div class="row form-group">
+            <div class="row">
                 <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
                 <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
             </div>
         </div>
-    </div>
-
-    <div id="status" class="container bg-light">
-        <div class="statusWrapper">
-            <div class="left">
-                <img src="http://placehold.it/72/72" alt="alt" />
-            </div>
-            <div class="right">
-                <p>Buildung A 4th floor:<br>
-                    <b>Sensor id 12344-34</b>
-                </p>
-                <div class="panel-heading" id="accordion">
-                    <button class="chatButton col-12 btn btn-elegant">
-                        <a type="button" class="col-12 btn btn-default" data-toggle="collapse" data-parent="#accordion"
-                            href="#collapseOne">Open Error Dialog</a>
-                    </button>
+        <div id="status" class="container bg-light">
+                <div class="statusWrapper">
+                    <div class="left">
+                        <img src="http://placehold.it/72/72" alt="alt" />
+                    </div>
+                    <div class="right">
+                        <p>Buildung A 4th floor:<br>
+                            <b>Sensor id 12344-34</b>
+                        </p>
+                        <div class="panel-heading" id="accordion">
+                            <button class="chatButton col-12 btn btn-elegant">
+                                <a type="button" class="col-12 btn btn-default" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapseOne">Open Error Dialog</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="chat">
-        <div class="container">
-            <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
-                <div class="panel panel-primary">
-                    <div class="panel-collapse collapse" id="collapseOne">
-                        <div class="panel-body">
-                            <ul class="chat">
-                                <li class="left clearfix"><span class="chat-img pull-left">
-                                        <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
-                                            alt="User Avatar" class="img-circle" />
-                                    </span>
-                                    <div class="chat-body clearfix">
-                                        <div class="header">
-                                            <strong class="primary-font">Alert: Need window fix!</strong> <small class="pull-right text-muted">
-                                                <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>ERROR
-                                                FC3Dx366</small>
+        
+            <div id="chat">
+                <div class="container errorStatus">
+                    <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
+                        <div class="panel panel-primary">
+                            <div class="panel-collapse collapse" id="collapseOne">
+                                <div class="panel-body">
+                                    <ul class="chat">
+                                        <li class="left clearfix"><span class="chat-img pull-left">
+                                                <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
+                                                    alt="User Avatar" class="img-circle" />
+                                            </span>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <strong class="primary-font">Alert: Need window fix!</strong> <small class="pull-right text-muted">
+                                                        <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>ERROR
+                                                        FC3Dx366</small>
+                                                </div>
+                                                <p>
+                                                    <b>Want to start a micro maintenance task D433XSC?</b>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container panel-footer">
+                                    <div class="input-group">
+                                        <div class="col-12 input-group-btn" style="display: flex;padding:0;">
+                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl">ACCEPT</button>
+                                            <button class="col-6 btn btn-warning btn-chat btn-xl">DECLINE</button>
                                         </div>
-                                        <p>
-                                            <b>Want to start a micro maintenance task D433XSC?</b>
-                                        </p>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="container panel-footer">
-                            <div class="input-group">
-                                <div class="col-12 input-group-btn" style="display: flex;padding:0;">
-                                    <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl">ACCEPT</button>
-                                    <button class="col-6 btn btn-warning btn-chat btn-xl">DECLINE</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
 </body>
 <!-- Injects the usabilty for the prototype-->
 <script src="./js/script.js"></script>

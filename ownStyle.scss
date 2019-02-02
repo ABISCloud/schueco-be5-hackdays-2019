@@ -21,6 +21,7 @@ body {
         padding: unset;
         top: 50px;
         display: grid;
+        margin-bottom: 180px;
     }
 
     .chartWrapper {
@@ -41,10 +42,14 @@ body {
         right: 15px;
     }
 
+    .errorStatus {
+        padding: unset;
+    }
+
     //Status
     #status {
         width: 100%;
-        padding-top: 22px;
+        padding: unset;
         .statusWrapper {
             border: 1px solid rgba(0,0,0,.1);
             width: 100%;
@@ -168,5 +173,12 @@ body {
 
     .pull-left {
         float: left;
+    }
+
+    .stickyControll {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+
     }
 }
