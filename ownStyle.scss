@@ -10,8 +10,9 @@ body {
 
     .sticky {
         position: fixed;
-        width:94%;
+        width:100%;
         top: 0;
+        left: 0;
         padding-top: unset;
         display: inline-flex;
         height: 88px;
@@ -74,7 +75,7 @@ body {
         }
     }
 
-    .statusIndicator {
+    .statusIndicator, .liveIndicator {
         text-align: center;
         width: 72px;
         height: 72px;
@@ -82,11 +83,18 @@ body {
         border-radius: 50%;
         border: 1px solid grey;
         border-radius: 50%;
-        animation: indicator 2s alternate infinite;
 
         i {
             color: #FFF;
         }
+    }
+
+    .statusIndicator {
+        animation: indicator 2s alternate infinite;
+    }
+
+    .liveIndicator {
+        background: #fc0101;
     }
 
     //Status
@@ -95,18 +103,17 @@ body {
 
         .statusWrapper {
             border: 1px solid rgba(0, 0, 0, .1);
-
             margin: 0 auto;
             padding: 15px;
             display: grid;
             grid-row: 72px;
-            grid-template-columns: 72px 1fr 72px;
+            grid-template-columns:72px 36.5% 72px 1fr 72px;
             grid-gap: 15px;
 
             p {
-                padding: 15px 0;
-                line-height: 20px;
-                font-size: 20px;
+                padding: unset;
+                line-height: 18px;
+                font-size: 18px;
                 margin-bottom: unset;
             }
         }
@@ -114,7 +121,6 @@ body {
         .chatButton {
             border: #78b928 !important;
             box-shadow: unset;
-            padding: 0;
             margin: 0 auto;
 
             a {
@@ -191,12 +197,12 @@ body {
         }
 
         .input-group {
-            height: 58px;
+            height: 72px;
             background: #FFF;
         }
 
         .btn-chat {
-            height: 58px;
+            height: 72px;
             border-radius: unset;
         }
 
@@ -207,7 +213,7 @@ body {
         border-radius: unset !important;
         background-color: #78b928;
         border: transparent;
-        height: 54px;
+        height: 72px;
         line-height: 48px;
 
         &:focus {
@@ -332,6 +338,10 @@ body {
 
         .downloadWrapper {
             left: 68.5% !important;
+        }
+
+        #status .statusWrapper {
+            grid-template-columns:72px 28% 72px 1fr 72px;
         }
 
     }

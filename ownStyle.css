@@ -12,8 +12,9 @@ body {
 
 body .sticky {
   position: fixed;
-  width: 94%;
+  width: 100%;
   top: 0;
+  left: 0;
   padding-top: unset;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -72,7 +73,7 @@ body .mapsWrapper iframe {
   height: 400px;
 }
 
-body .statusIndicator {
+body .statusIndicator, body .liveIndicator {
   text-align: center;
   width: 72px;
   height: 72px;
@@ -80,12 +81,19 @@ body .statusIndicator {
   border-radius: 50%;
   border: 1px solid grey;
   border-radius: 50%;
+}
+
+body .statusIndicator i, body .liveIndicator i {
+  color: #FFF;
+}
+
+body .statusIndicator {
   -webkit-animation: indicator 2s alternate infinite;
           animation: indicator 2s alternate infinite;
 }
 
-body .statusIndicator i {
-  color: #FFF;
+body .liveIndicator {
+  background: #fc0101;
 }
 
 body #status {
@@ -100,15 +108,15 @@ body #status .statusWrapper {
   display: grid;
   -ms-grid-row: 72;
   grid-row: 72px;
-  -ms-grid-columns: 72px 1fr 72px;
-      grid-template-columns: 72px 1fr 72px;
+  -ms-grid-columns: 72px 36.5% 72px 1fr 72px;
+      grid-template-columns: 72px 36.5% 72px 1fr 72px;
   grid-gap: 15px;
 }
 
 body #status .statusWrapper p {
-  padding: 15px 0;
-  line-height: 20px;
-  font-size: 20px;
+  padding: unset;
+  line-height: 18px;
+  font-size: 18px;
   margin-bottom: unset;
 }
 
@@ -116,7 +124,6 @@ body #status .chatButton {
   border: #78b928 !important;
   -webkit-box-shadow: unset;
           box-shadow: unset;
-  padding: 0;
   margin: 0 auto;
 }
 
@@ -193,12 +200,12 @@ body #chat .panel-footer {
 }
 
 body #chat .input-group {
-  height: 58px;
+  height: 72px;
   background: #FFF;
 }
 
 body #chat .btn-chat {
-  height: 58px;
+  height: 72px;
   border-radius: unset;
 }
 
@@ -207,7 +214,7 @@ body .btn-schuecoGreen {
   border-radius: unset !important;
   background-color: #78b928;
   border: transparent;
-  height: 54px;
+  height: 72px;
   line-height: 48px;
 }
 
@@ -362,6 +369,10 @@ body .warningWrapper {
   }
   body .downloadWrapper {
     left: 68.5% !important;
+  }
+  body #status .statusWrapper {
+    -ms-grid-columns: 72px 28% 72px 1fr 72px;
+        grid-template-columns: 72px 28% 72px 1fr 72px;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */

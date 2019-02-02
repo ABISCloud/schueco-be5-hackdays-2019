@@ -185,12 +185,12 @@ body #chat .panel-footer {
 }
 
 body #chat .input-group {
-  height: 58px;
+  height: 72px;
   background: #FFF;
 }
 
 body #chat .btn-chat {
-  height: 58px;
+  height: 72px;
   border-radius: unset;
 }
 
