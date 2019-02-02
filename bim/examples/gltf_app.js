@@ -11,7 +11,12 @@ function highlight(oid, selected) {
         clear:true,
         selected:true
     });
-}        
+}
+
+function getModelEntities () {
+    var scene = bimSurfer.viewer.scene;
+    return Object.keys(scene.entities).filter(o => o.length > 10);
+}
 
 require([
     "bimsurfer/src/BimSurfer",
@@ -52,7 +57,7 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     }).then(function (model) {
         
         var scene = bimSurfer.viewer.scene;
-        
+
         var aabb = scene.worldBoundary.aabb;
         var diag = xeogl.math.subVec3(aabb.slice(3), aabb, xeogl.math.vec3());
         var modelExtent = xeogl.math.lenVec3(diag);
@@ -65,11 +70,13 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
         bimSurfer.viewFit({centerModel:true});
         
         bimSurfer.viewer.scene.canvas.canvas.style.display = 'block';
-
     });
 
     bimSurfer.on("selection-changed", function(selected) {
         data.setSelected(selected.objects.map(function(id) {
+            console.log("Selected part: ",id);
+            getModelEntities();
+
             return Utils.CompressGuid(id.split("#")[1].substr(8, 36).replace(/-/g, ""));
         }));
     });
