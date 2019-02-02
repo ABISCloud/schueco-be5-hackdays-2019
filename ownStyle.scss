@@ -29,7 +29,7 @@ body {
         .statusWrapper {
             border: 1px solid #78b928;
             width: 100%;
-            margin: 0 0 15px 0;
+            margin: 0 auto;
             padding: 15px;
             display: grid;
             grid-row: 72px;
@@ -68,6 +68,10 @@ body {
             list-style: none;
             margin: 0;
             padding: 0;
+        }
+
+        .errorWrapper {
+            background: #f2f2f2;
         }
 
         .img-circle {
