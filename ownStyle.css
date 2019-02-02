@@ -57,6 +57,22 @@ body .errorStatus {
   padding: unset;
 }
 
+body .statusIndicator {
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  line-height: 82px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  border-radius: 50%;
+  -webkit-animation: indicator .8s alternate infinite;
+          animation: indicator .8s alternate infinite;
+}
+
+body .statusIndicator i {
+  color: #FFF;
+}
+
 body #status {
   padding: unset;
 }
@@ -72,10 +88,6 @@ body #status .statusWrapper {
   -ms-grid-columns: 72px 1fr;
       grid-template-columns: 72px 1fr;
   grid-gap: 15px;
-}
-
-body #status .statusWrapper img {
-  border-radius: 50%;
 }
 
 body #status .statusWrapper p {
@@ -249,6 +261,30 @@ body .downloadWrapper {
   to {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes indicator {
+  from {
+    background: #78b928;
+    border: #fc0101;
+  }
+  to {
+    -webkit-transform: #fc0101;
+            transform: #fc0101;
+    border: #78b928;
+  }
+}
+
+@keyframes indicator {
+  from {
+    background: #78b928;
+    border: #fc0101;
+  }
+  to {
+    -webkit-transform: #fc0101;
+            transform: #fc0101;
+    border: #78b928;
   }
 }
 
