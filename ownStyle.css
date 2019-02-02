@@ -25,7 +25,7 @@ body #chartArea {
   top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
 }
 
 body .chartWrapper {
