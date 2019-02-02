@@ -1,6 +1,11 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 
+:root {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
     .sticky {
         position: fixed;
         top: 0;
@@ -191,6 +196,7 @@ body {
         font-weight: 100;
         letter-spacing: 1px;
     }
+
     .chart-widget {
         display: inline-flex;
         width: 92%;
@@ -207,15 +213,19 @@ body {
         .stickyControll {
             width: 100%;
         }
+
         .sticky {
             right: 0;
         }
+
         #chartArea {
             display: inline-grid;
             left: 0;
         }
+
         .chart-widget {
             transform: scale(1);
+            margin-top: 40px;
         }
     }
 }
