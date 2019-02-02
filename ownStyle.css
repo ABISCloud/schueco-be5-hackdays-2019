@@ -245,6 +245,15 @@ body .btn-schuecoGreen:focus {
           box-shadow: unset !important;
 }
 
+body .poweredByAbis {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: -42.55em;
+  top: 18.75vh;
+  z-index: 9999999;
+}
+
 body .pull-right {
   float: right;
 }
