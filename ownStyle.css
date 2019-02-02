@@ -263,8 +263,7 @@ body .chart-widget {
   padding: unset;
   margin: 0 auto;
   position: relative;
-  width: 100%;
-  left: 4em;
+  width: -webkit-fill-available;
 }
 
 body .chart-widget:last-of-type {
@@ -348,7 +347,7 @@ body .warningWrapper {
     width: 100%;
   }
   body .chart-widget {
-    left: 22px;
+    left: 10px;
   }
   body .warningWrapper {
     left: unset;
