@@ -31,7 +31,7 @@ body {
         width: 100%;
         overflow-y: auto;
         margin-right: 0;
-        max-height: 86vh;
+        max-height: 72vh;
         padding: unset;
         display: block;
         left: 0;
@@ -254,10 +254,14 @@ body {
 
     .chart-widget {
         display: block;
-        margin: 0 5vh;
+        margin: 0 10vh;
         padding: 0 15px;
         margin-left: 0vh;
         width: 100%;
+
+        &:last-of-type {
+            margin-bottom: 4vh;
+        }
     }
 
     .effectBlendIn {
