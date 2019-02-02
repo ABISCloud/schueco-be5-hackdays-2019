@@ -9,6 +9,12 @@ body .sticky {
   top: 0;
 }
 
+body .arrowTo {
+  position: relative;
+  left: 48%;
+  height: 24px;
+}
+
 body #chart {
   width: 100%;
   min-height: 420px;
@@ -25,7 +31,7 @@ body .navbar-toggler {
 }
 
 body #status .statusWrapper {
-  border: 1px solid #78b928;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   margin: 0 auto;
   padding: 15px;
@@ -83,9 +89,7 @@ body #chat .img-circle {
 }
 
 body #chat .chat li {
-  margin-bottom: 10px;
   padding: 15px 0;
-  border-bottom: 1px dotted #B3A9A9;
 }
 
 body #chat .chat li.left .chat-body {
