@@ -263,11 +263,13 @@ body .pull-left {
 }
 
 body .stickyControll {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   width: -webkit-fill-available;
-  display: table;
-  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 4em auto 0 auto;
 }
 
 body .stickyControll .container {

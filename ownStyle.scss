@@ -266,11 +266,11 @@ body {
     }
 
     .stickyControll {
-        position: fixed;
+        position: sticky;
         bottom: 0;
         width: -webkit-fill-available;
-        display: table;
-        margin: 0 auto;
+        box-sizing: border-box;
+        margin: 4em auto 0 auto;
 
         .container {
             margin: unset;

@@ -269,7 +269,7 @@ body {
         position: fixed;
         bottom: 0;
         width: -webkit-fill-available;
-        display: table;
+        box-sizing: content-box;
         margin: 0 auto;
 
         .container {
