@@ -1,4 +1,6 @@
 class Chart {
+
+
     constructor(sensor) {
         let self = this;
 
@@ -80,7 +82,7 @@ class Chart {
         }
 
         this._sensor.registerNewValueCallback(
-            (sensor, timestamp, value) => self._updateOptions(self._sensor, self._sensor.property.time , value));
+            (sensor, timestamp, value) => self._updateOptions(self._sensor, self._sensor.property.time, value));
     }
 
     downloadCsv() {
@@ -103,7 +105,6 @@ class Chart {
     }
 
     _updateOptions(sensor, timestamp, value) {
-
         // TODO: Duplicate code
         let label = sensor.name;
         switch (label) {
@@ -130,6 +131,7 @@ class Chart {
                 this._options.series[0].data.shift();
                 this._options.xAxis.data.shift();
             }
+            this._options.series[0].data.push(value);
             this._options.series[0].data.push(value);
             this._options.xAxis.data.push(timestamp.toString().substr(11, 5));
         }
