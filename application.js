@@ -14,6 +14,7 @@ $(() => {
     function updateSensorDropDown() {
         let options = Object.keys(property.sensors);
         valueNameSelect.innerHTML = options.map(o => {
+            // TODO: Duplicate code
             let label = o;
             switch (label) {
                 case "userdefined_double_1": label = "rain"; break;
