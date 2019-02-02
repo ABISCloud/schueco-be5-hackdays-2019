@@ -34,10 +34,12 @@ body {
         overflow-y: scroll;
         margin-right: 0;
         max-height: 73vh;
+        min-height: 73vh;
         padding: unset;
         display: block;
         left: 0;
         top: 88px;
+        border-left: 1px inset rgba(255,255,255,0.3);
 
         &:last-of-type {
             bottom: 10%;
@@ -255,9 +257,11 @@ body {
     }
 
     .chart-widget {
+        font-family: 'Titillium Web', sans-serif !important;
         display: block;
         padding: unset;
         margin: 0 auto;
+        left: .8em;
         position: relative;
         width: -webkit-fill-available;
 
