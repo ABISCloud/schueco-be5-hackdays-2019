@@ -20,7 +20,7 @@ body {
         min-height: 380px;
         padding: unset;
         top: 50px;
-        display: flex;
+        display: grid;
     }
 
     .chartWrapper {
@@ -43,8 +43,9 @@ body {
     //Status
     #status {
         width: 100%;
+
         .statusWrapper {
-            border: 1px solid rgba(0,0,0,.1);
+            border: 1px solid rgba(0, 0, 0, .1);
             width: 100%;
             margin: 0 auto;
             padding: 15px;
@@ -70,6 +71,7 @@ body {
             box-shadow: unset;
             padding: 0;
             margin: 0 auto;
+
             a {
                 height: 32px;
                 border: transparent;
@@ -82,6 +84,7 @@ body {
     // Chat Snippet
     #chat {
         width: 100%;
+
         .chat {
             list-style: none;
             margin: 0;
