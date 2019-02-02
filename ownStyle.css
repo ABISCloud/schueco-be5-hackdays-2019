@@ -268,27 +268,6 @@ body .effectBlendIn {
           animation: blendIn 1s infinite;
 }
 
-body .downloadWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  position: relative;
-  top: 25px;
-  left: 75% !important;
-  letter-spacing: 2px;
-  z-index: 999;
-  height: 30px;
-  font-size: 12px;
-  padding: unset;
-  background: #78b928;
-  color: #833333;
-}
-
-body .downloadWrapper a {
-  padding: 0 8px;
-}
-
 body .warningWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
