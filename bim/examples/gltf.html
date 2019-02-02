@@ -19,8 +19,7 @@
         // BIMserver modules to find themselves, but it destroys any option
         // for further modularization in the client.
         var require = {
-            baseUrl: "../",
-            // urlArgs: "bust=" + version
+            baseUrl: "../"
         };
     </script>
 
@@ -28,31 +27,21 @@
 
 </head>
 <body>
-<div id="maincontainer">
-    <div id="topsection">
-        <h1>BIMsurfer demo</h1>
-        <div id="typeSelector">
-            <div>&nbsp;</div>
-        </div>
-    </div>
+<div >
     <div id="contentwrapper">
-        <div id="colmid">
-            <div id="colright">
-                <div id="col1wrap">
-                    <div id="col1pad">
-                        <div id="viewerContainer">
-                        </div>                        
-                    </div>
-                </div>
-                <div id="treeContainer" class="bimsurfer-static-tree">
-                </div>
-                <div id="dataContainer" class="bimsurfer-metadata">
-                </div>
+        <div id="mapping">
+            <ul id="sensorList">
+            </ul>
+        </div>
+        <div id="viewerArea">
+            <div id="viewerContainer">
+            </div>
+            <div id="treeContainer">
+            </div>
+            <div id="dataContainer">
             </div>
         </div>
     </div>
-    
 </div>
-<div id="status"></div>
 </body>
 </html>

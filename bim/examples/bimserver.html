@@ -175,23 +175,25 @@
     	                bimSurfer.on("loading-finished", function(){
     	                	document.getElementById("status").innerHTML = "Loading finished";
                             var domNode = document.getElementById("typeSelector");
-                            domNode.innerHTML = "";
-                            bimSurfer.getTypes().forEach(function(ifc_type) {
-                                var on = ifc_type.visible;
-                                var d = document.createElement("div");
-                                var t = document.createTextNode(ifc_type.name);
-                                var setClass = function() {
-                                    d.className = "fa fa-eye " + ["inactive", "active"][on*1];
-                                };
-                                setClass();
-                                d.appendChild(t);
-                                domNode.appendChild(d);
-                                d.onclick = function() {
-                                    on = !on;
+                            if (!domNode) {
+                                domNode.innerHTML = "";
+                                bimSurfer.getTypes().forEach(function (ifc_type) {
+                                    var on = ifc_type.visible;
+                                    var d = document.createElement("div");
+                                    var t = document.createTextNode(ifc_type.name);
+                                    var setClass = function () {
+                                        d.className = "fa fa-eye " + ["inactive", "active"][on * 1];
+                                    };
                                     setClass();
-                                    bimSurfer.setVisibility({types:[ifc_type.name], visible:on});
-                                };
-                            });
+                                    d.appendChild(t);
+                                    domNode.appendChild(d);
+                                    d.onclick = function () {
+                                        on = !on;
+                                        setClass();
+                                        bimSurfer.setVisibility({types: [ifc_type.name], visible: on});
+                                    };
+                                });
+                            }
     	                });
     	                bimSurfer.on("loading-started", function(){
     	                	document.getElementById("status").innerHTML = "Loading...";

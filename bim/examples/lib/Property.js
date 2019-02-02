@@ -29,14 +29,14 @@ class Property {
      */
     connect(sensorsChanged) {
         let self = this;
-        return this._connection.connect().then(propertyId => {
+        this._connection.connect().then(propertyId => {
             // Register a catch-all handler for new messages
             self._connection.registerMessageCallback("", message => {
 
                 let sensor = this._sensors[message.value_name];
 
                 if (!sensor) {
-                    sensor = new Sensor(message.value_name, property);
+                    sensor = new Sensor(message.value_name, self);
                     this._sensors[message.value_name] = sensor;
 
                     if (sensorsChanged) {
