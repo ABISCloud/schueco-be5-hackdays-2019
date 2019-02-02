@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Schueco BE5 Hackdays
+        </title>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        Schueco BE5 Hackdays
-    </title>
-    <!-- Latest compiled and minified CSS -->
+        <!-- External stylesheets -->
+        <link rel="stylesheet" type="text/css" href="ownStyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="ownStyle.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <!-- External js dependencies -->
+        <script src="http://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Classes -->
+        <script src="lib/Chart.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/Property.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/PropertyConnection.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/Sensor.js" type="text/javascript" charset="utf-8"></script>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-</head>
+        <!-- Main application and globals -->
+        <script src="application.js" type="text/javascript" charset="utf-8"></script>
+    </head>
 
 <body class="container">
     <div class="row">
@@ -38,8 +42,15 @@
     </div>
     <div class="row bg-light">
         <div class="col-md-12 center">
+<<<<<<< HEAD
             <div class="col-md-6 col-xs-12">
                 <div id="chart"></div>
+=======
+            <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+            <button onclick="addChart()">Add Chart</button>
+            <div id="chartArea" class="col-md-6 col-xs-12">
+
+>>>>>>> c1580c5acb5452e2516140173c823449aef26851
             </div>
         </div>
         <span class="arrowTo">
@@ -66,6 +77,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <div id="chat">
         <div class="row">
@@ -108,3 +120,6 @@
 <script src="./js/script.js"></script>
 
 </html>
+=======
+</body>
+>>>>>>> c1580c5acb5452e2516140173c823449aef26851
