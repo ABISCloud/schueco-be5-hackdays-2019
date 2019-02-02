@@ -50,6 +50,7 @@ class Chart {
         this._chartContainer.style.width = '100%';
         this._chartContainer.className = 'container';
         this._chartContainer.style.height = '360px';
+        this._chartContainer.style.padding = 'unset';
         this._chartContainer.style.left = '-4%';
 
         this._sensor = sensor;
