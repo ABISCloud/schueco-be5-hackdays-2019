@@ -53,6 +53,10 @@ body .navbar-toggler {
   left: 15px;
 }
 
+body .panel-heading {
+  text-align: center;
+}
+
 body .errorStatus {
   padding: unset;
 }
