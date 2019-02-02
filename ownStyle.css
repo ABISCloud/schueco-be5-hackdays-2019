@@ -28,9 +28,9 @@ body #chartArea {
   min-height: 380px;
   padding: unset;
   top: 50px;
-  display: -ms-grid;
-  display: grid;
-  margin-bottom: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body .chartWrapper {
@@ -196,12 +196,30 @@ body .productLabel {
   letter-spacing: 1px;
 }
 
+body .chart-widget {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 90%;
+  margin-left: -48px;
+}
+
+body .downloadWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   body .stickyControll {
     width: 100%;
   }
   body .sticky {
     right: 0;
+  }
+  body #chartArea {
+    display: -ms-inline-grid;
+    display: inline-grid;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */

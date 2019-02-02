@@ -23,8 +23,7 @@ body {
         min-height: 380px;
         padding: unset;
         top: 50px;
-        display: grid;
-        margin-bottom: 180px;
+        display: flex;
     }
 
     .chartWrapper {
@@ -191,6 +190,15 @@ body {
         font-weight: 100;
         letter-spacing: 1px;
     }
+    .chart-widget {
+        display: inline-flex;
+        width: 92%;
+        margin-left: -48px;
+    }
+
+    .downloadWrapper {
+        display: flex;
+    }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         .stickyControll {
@@ -198,6 +206,9 @@ body {
         }
         .sticky {
             right: 0;
+        }
+        #chartArea {
+            display: inline-grid;
         }
     }
 }
