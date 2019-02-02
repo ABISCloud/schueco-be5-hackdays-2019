@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="ownStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 
     <!-- External js dependencies -->
     <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
@@ -56,7 +57,8 @@
                 </span>
                 <div class="row">
                     <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()"><i style="font-size:1.4em;margin-right:7px;" class="far fa-2x fa-chart-bar"></i>Open Chart</button>
+                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()"><i style="font-size:1.4em;margin-right:7px;"
+                            class="far fa-2x fa-chart-bar"></i>Open Chart</button>
                 </div>
             </div>
 
@@ -74,7 +76,8 @@
                         </p>
                         <div class="panel-heading" id="accordion">
                             <a type="button" class="col-8 btn btn-schuecoGreen" data-toggle="collapse" data-parent="#accordion"
-                                href="#collapseOne"><i style="font-size:1.4em;margin-right:7px;" class="fas fa-exclamation-triangle"></i>Open Error Dialog</a>
+                                href="#collapseOne"><i style="font-size:1.4em;margin-right:7px;" class="fas fa-exclamation-triangle"></i>Open
+                                Error Dialog</a>
                         </div>
                     </div>
                 </div>
@@ -108,9 +111,18 @@
                                 <div class="container panel-footer">
                                     <div class="input-group">
                                         <div class="col-12 input-group-btn" style="display: flex;padding:0;">
-                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl"><i style="font-size:1.4em;margin-right:7px;" class="fas fa-check"></i>ACCEPT</button>
-                                            <button class="col-6 btn btn-warning btn-chat btn-xl"><i style="font-size:1.4em;margin-right:7px;" class="far fa-times-circle"></i>DECLINE</button>
+                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl" href="#collapseTwo" data-toggle="collapse" data-parent="#collapseTwo"><i
+                                                    style="font-size:1.4em;margin-right:7px;" class="fas fa-check"></i>ACCEPT</button>
+                                            <button class="col-6 btn btn-warning btn-chat btn-xl"><i style="font-size:1.4em;margin-right:7px;"
+                                                    class="far fa-times-circle"></i>DECLINE</button>
                                         </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mapsWrapper">
+                                        <div class="collapse panel-collapse" id="collapseTwo">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d5117748.802956131!2d-0.24681423238265524!3d52.04033503286299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e1!4m3!3m2!1d48.2681689!2d11.6661062!4m5!1s0x4887c786156c3b5d%3A0xb21928d390bbc0ee!2sUniversity+of+Edinburgh%2C+Old+College%2C+South+Bridge%2C+Edinburgh+EH8+9YL%2C+Vereinigtes+K%C3%B6nigreich!3m2!1d55.9445158!2d-3.1892413!5e1!3m2!1sde!2sde!4v1549103242907"
+                                            frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
