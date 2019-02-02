@@ -29,6 +29,7 @@
             <a class="navbar-brand" href="#">
                 <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
             </a>
+            <select class="pull-right btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,13 +38,12 @@
     </div>
     <div class="row">
         <div class="col-md-12 center">
-            <select id="valueNameSelect" onchange="chartValueNameChanged()"></select>
             <div class="col-md-6 col-xs-12">
                 <div id="chart"></div>
             </div>
         </div>
     </div>
-    <button onclick="download()">Download</button>
+    <button class="btn btn-schuecoGreen" onclick="download()">Download</button>
     
     <div id="status">
         <div class="panel-heading" id="accordion">

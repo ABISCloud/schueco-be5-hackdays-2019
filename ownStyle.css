@@ -20,13 +20,21 @@ body .navbar-toggler {
 }
 
 body #status .chatButton {
+  border: transparent !important;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
   padding: 0;
   margin: 0 auto;
-  border-radius: 4px;
+  opacity: 0;
 }
 
 body #status .chatButton a {
   height: 32px;
+  border: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  background: #FFF;
+  border-radius: unset;
 }
 
 body #chat .chat {
@@ -65,8 +73,9 @@ body #chat .panel-body {
 }
 
 body #chat .btn-chat {
-  background: #5f9621;
-  color: #f8f8f8;
+  height: 38px;
+  width: 8rem;
+  border-radius: unset;
 }
 
 body #chat ::-webkit-scrollbar-track {
@@ -82,5 +91,12 @@ body #chat ::-webkit-scrollbar {
 body #chat ::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
+}
+
+body .btn-schuecoGreen {
+  color: #fff;
+  background-color: #5f9621;
+  border-color: #5f9621;
+  height: 38px;
 }
 /*# sourceMappingURL=ownStyle.css.map */
