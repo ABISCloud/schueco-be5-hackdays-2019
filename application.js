@@ -14,10 +14,17 @@ $(() => {
     function updateSensorDropDown() {
         let options = Object.keys(property.sensors);
         valueNameSelect.innerHTML = options.map(o => {
+            // TODO: Duplicate code
+            let label = o;
+            switch (label) {
+                case "userdefined_double_1": label = "rain"; break;
+                case "userdefined_double_2": label = "rel_humidity"; break;
+                case "userdefined_double_3": label = "air_pressure";  break;
+            }
             if (o === selectedSensorName) {
-                return "<option disabled selected value=\"\">" + o + "</option>"
+                return "<option disabled selected value=\"\">" + label + "</option>"
             } else {
-                return "<option value=\"" + o + "\">" + o + "</option>"
+                return "<option value=\"" + o + "\">" + label + "</option>"
             }
         });
         // Set a default value for the dropdown
