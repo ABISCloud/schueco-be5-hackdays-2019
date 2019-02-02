@@ -1,6 +1,11 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+    .sticky {
+        position: fixed;
+        top: 0;
+    }
+
     #chart {
         width: 100%;
         min-height: 420px;

@@ -4,6 +4,11 @@ body {
   color: #444;
 }
 
+body .sticky {
+  position: fixed;
+  top: 0;
+}
+
 body #chart {
   width: 100%;
   min-height: 420px;
