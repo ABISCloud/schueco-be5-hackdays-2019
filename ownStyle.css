@@ -48,13 +48,11 @@ body .errorStatus {
 }
 
 body #status {
-  width: 100%;
   padding: unset;
 }
 
 body #status .statusWrapper {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
   margin: 0 auto;
   padding: 15px;
   display: -ms-grid;
@@ -184,6 +182,5 @@ body .pull-left {
 body .stickyControll {
   position: fixed;
   bottom: 0;
-  width: 100%;
 }
 /*# sourceMappingURL=ownStyle.css.map */
