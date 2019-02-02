@@ -1,107 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>
-            Schueco BE5 Hackdays
-        </title>
 
-        <!-- External stylesheets -->
-        <link rel="stylesheet" type="text/css" href="ownStyle.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Schueco BE5 Hackdays
+    </title>
 
-        <!-- External js dependencies -->
-        <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- External stylesheets -->
+    <link rel="stylesheet" type="text/css" href="ownStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
-        <!-- Classes -->
-        <script src="lib/Chart.js" type="text/javascript" charset="utf-8"></script>
-        <script src="lib/Property.js" type="text/javascript" charset="utf-8"></script>
-        <script src="lib/PropertyConnection.js" type="text/javascript" charset="utf-8"></script>
-        <script src="lib/Sensor.js" type="text/javascript" charset="utf-8"></script>
+    <!-- External js dependencies -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-        <!-- Main application and globals -->
-        <script src="application.js" type="text/javascript" charset="utf-8"></script>
-    </head>
+    <!-- Classes -->
+    <script src="lib/Chart.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/Property.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/PropertyConnection.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/Sensor.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Main application and globals -->
+    <script src="application.js" type="text/javascript" charset="utf-8"></script>
+</head>
 
 <body class="container">
-    <div class="row">
-        <nav class="sticky col-12 navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="sticky text-center container navbar navbar-expand-lg navbar-light bg-light">
+        <div class="col-12">
             <a class="navbar-brand" href="#" style="width:200px;">
                 <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
+                <span class="productLabel"><b>IFWM</b></span>
             </a>
-            <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>-->
-        </nav>
-    </div>
-
-    <div class="row bg-light">
-        <div class="col-12">
-            <div class="chartWrapper col-md-12 col-xs-12">
-                <div id="chartArea" class="col-md-12 col-xs-12"></div>
-            </div>
-            <span class="arrowTo">
-                <img src="./assets/images/arrow-to.png" alt="arrow" />
-            </span>
-            <div class="row form-group">
-                <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-                <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
-            </div>
         </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="container chartWrapper col-md-12 col-xs-12">
+        <div id="chartArea" class="col-md-12 col-xs-12"></div>
     </div>
 
-    <div id="status" class="container bg-light">
-        <div class="statusWrapper">
-            <div class="left">
-                <img src="https://placehold.it/72/72" alt="alt" />
-            </div>
-            <div class="right">
-                <p>Buildung A 4th floor:<br>
-                    <b>Sensor id 12344-34</b>
-                </p>
-                <div class="panel-heading" id="accordion">
-                    <button class="chatButton col-12 btn btn-elegant">
-                        <a type="button" class="col-12 btn btn-default" data-toggle="collapse" data-parent="#accordion"
-                            href="#collapseOne">Open Error Dialog</a>
-                    </button>
+    <div>
+        <div class="row bg-light stickyControll">
+            <div class="col-12">
+                <span class="arrowTo">
+                    <img src="./assets/images/arrow-to.png" alt="arrow" />
+                </span>
+                <div class="row">
+                    <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="chat">
-        <div class="container">
-            <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
-                <div class="panel panel-primary">
-                    <div class="panel-collapse collapse" id="collapseOne">
-                        <div class="panel-body">
-                            <ul class="chat">
-                                <li class="left clearfix"><span class="chat-img pull-left">
-                                        <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
-                                            alt="User Avatar" class="img-circle" />
-                                    </span>
-                                    <div class="chat-body clearfix">
-                                        <div class="header">
-                                            <strong class="primary-font">Alert: Need window fix!</strong> <small class="pull-right text-muted">
-                                                <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>ERROR
-                                                FC3Dx366</small>
-                                        </div>
-                                        <p>
-                                            <b>Want to start a micro maintenance task D433XSC?</b>
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
+
+            <div id="status" class="container bg-light">
+                <div class="statusWrapper">
+                    <div class="left">
+                        <img src="http://placehold.it/72/72" alt="alt" />
+                    </div>
+                    <div class="right">
+                        <p>Buildung A 4th floor:<br>
+                            <b>Sensor id 12344-34</b>
+                        </p>
+                        <div class="panel-heading" id="accordion">
+                            <button class="chatButton col-12 btn btn-elegant">
+                                <a type="button" class="col-12 btn btn-default" data-toggle="collapse" data-parent="#accordion"
+                                    href="#collapseOne">Open Error Dialog</a>
+                            </button>
                         </div>
-                        <div class="container panel-footer">
-                            <div class="input-group">
-                                <div class="col-12 input-group-btn" style="display: flex;padding:0;">
-                                    <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl">ACCEPT</button>
-                                    <button class="col-6 btn btn-warning btn-chat btn-xl">DECLINE</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="chat">
+                <div class="container errorStatus">
+                    <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
+                        <div class="panel panel-primary">
+                            <div class="panel-collapse collapse" id="collapseOne">
+                                <div class="panel-body">
+                                    <ul class="chat">
+                                        <li class="left clearfix"><span class="chat-img pull-left">
+                                                <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
+                                                    alt="User Avatar" class="img-circle" />
+                                            </span>
+                                            <div class="chat-body clearfix">
+                                                <div class="header">
+                                                    <strong class="primary-font">Alert: Need window fix!</strong>
+                                                    <small class="pull-right text-muted">
+                                                        <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>ERROR
+                                                        FC3Dx366</small>
+                                                </div>
+                                                <p>
+                                                    <b>Want to start a micro maintenance task D433XSC?</b>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="container panel-footer">
+                                    <div class="input-group">
+                                        <div class="col-12 input-group-btn" style="display: flex;padding:0;">
+                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl">ACCEPT</button>
+                                            <button class="col-6 btn btn-warning btn-chat btn-xl">DECLINE</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -109,4 +116,9 @@
                 </div>
             </div>
         </div>
+    </div>
 </body>
+<!-- Injects the usabilty for the prototype-->
+<script src="./js/script.js"></script>
+
+</html>

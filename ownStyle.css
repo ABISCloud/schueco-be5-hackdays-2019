@@ -7,8 +7,13 @@ body {
 body .sticky {
   position: fixed;
   top: 0;
-  height: 54px;
+  padding-top: unset;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 88px;
   z-index: 999;
+  margin: 0 auto;
 }
 
 body .arrowTo {
@@ -25,6 +30,7 @@ body #chartArea {
   top: 50px;
   display: -ms-grid;
   display: grid;
+  margin-bottom: 180px;
 }
 
 body .chartWrapper {
@@ -39,17 +45,19 @@ body img.logo {
 
 body .navbar-toggler {
   position: absolute;
-  right: 15px;
+  left: 15px;
+}
+
+body .errorStatus {
+  padding: unset;
 }
 
 body #status {
-  width: 100%;
-  padding-top: 22px;
+  padding: unset;
 }
 
 body #status .statusWrapper {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
   margin: 0 auto;
   padding: 15px;
   display: -ms-grid;
@@ -174,5 +182,26 @@ body .pull-right {
 
 body .pull-left {
   float: left;
+}
+
+body .stickyControll {
+  position: fixed;
+  bottom: 0;
+  width: 67%;
+}
+
+body .productLabel {
+  color: #78b928;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  body .stickyControll {
+    width: 100%;
+  }
+  body .sticky {
+    right: 0;
+  }
 }
 /*# sourceMappingURL=ownStyle.css.map */
