@@ -6,6 +6,8 @@
 body {
   font-family: 'Titillium Web', sans-serif !important;
   overflow-x: hidden;
+  -webkit-transform: invert(1);
+          transform: invert(1);
   background: #f2f2f2;
   color: #444;
 }
