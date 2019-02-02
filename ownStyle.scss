@@ -122,8 +122,8 @@ body {
 
             p {
                 padding: unset;
-                line-height: 18px;
-                font-size: 18px;
+                line-height: 36px;
+                font-size: 24px;
                 margin-bottom: unset;
             }
         }
@@ -266,7 +266,7 @@ body {
         width: -webkit-fill-available;
 
         &:last-of-type {
-            margin-bottom: 4vh;
+            margin-bottom: 10vh;
         }
     }
 
@@ -311,6 +311,10 @@ body {
         }
     }
 
+    .noMobile {
+        display: block;
+    }
+
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         .stickyControll {
             width: 100%;
@@ -329,8 +333,21 @@ body {
             left: unset;
         }
 
+        .noMobile {
+            display: none;
+        }
+
         #status .statusWrapper {
-            grid-template-columns: 72px 28% 72px 1fr 72px;
+            grid-template-columns: 72px 24% 72px 72px;
+
+            p {
+                font-size: inherit;
+                line-height: 20px;
+            }
+        }
+
+        .downloadWrapper {
+            display: none;
         }
 
     }
