@@ -7,6 +7,8 @@ body {
 body .sticky {
   position: fixed;
   top: 0;
+  height: 54px;
+  z-index: 999;
 }
 
 body .arrowTo {
@@ -15,9 +17,16 @@ body .arrowTo {
   height: 24px;
 }
 
-body #chart {
+body #chartArea {
+  position: relative;
   width: 100%;
-  min-height: 420px;
+  min-height: 380px;
+  padding: unset;
+  top: 50px;
+}
+
+body .chartWrapper {
+  margin-top: 54px;
 }
 
 body img.logo {
