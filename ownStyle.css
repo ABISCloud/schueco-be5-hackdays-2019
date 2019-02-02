@@ -23,8 +23,7 @@ body #chartArea {
   min-height: 380px;
   padding: unset;
   top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -ms-grid;
   display: grid;
 }
 
@@ -45,6 +44,7 @@ body .navbar-toggler {
 
 body #status {
   width: 100%;
+  padding-top: 22px;
 }
 
 body #status .statusWrapper {
