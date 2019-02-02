@@ -42,8 +42,14 @@ $(() => {
         updateSensorDropDown();
     };
 
+    let chart = null;
+
     property.connect(() => {
         updateSensorDropDown();
+        if (!chart) {
+            chart = new Chart(property.sensors['ambient_temperature']);
+            chart.attach(chartArea.id);
+        }
     });
 });
 
