@@ -12,6 +12,7 @@ body {
 
 body .sticky {
   position: fixed;
+  width: 67%;
   top: 0;
   padding-top: unset;
   display: -webkit-inline-box;
@@ -63,9 +64,8 @@ body .errorStatus {
 }
 
 body .warningButton {
-  float: right;
   position: absolute;
-  right: 15px;
+  right: 37.6%;
   top: 60%;
   z-index: 999;
 }
@@ -230,7 +230,12 @@ body .pull-left {
 body .stickyControll {
   position: fixed;
   bottom: 0;
-  width: 67%;
+  width: -webkit-fill-available;
+  margin: 0 auto;
+}
+
+body .stickyControll .container {
+  margin: unset;
 }
 
 body .productLabel {
@@ -281,6 +286,7 @@ body .warningWrapper {
   position: relative;
   top: -5px;
   left: 22%;
+  z-index: 99999999;
   letter-spacing: 2px;
   z-index: 999;
   height: 54px;
@@ -357,6 +363,10 @@ body .warningWrapper {
     left: -15px;
     margin-right: auto;
     width: 320px;
+  }
+  body .warningWrapper {
+    left: unset;
+    right: -21vh;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */

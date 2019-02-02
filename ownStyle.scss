@@ -10,6 +10,7 @@ body {
 
     .sticky {
         position: fixed;
+        width: 67%;
         top: 0;
         padding-top: unset;
         display: inline-flex;
@@ -62,9 +63,8 @@ body {
     }
 
     .warningButton {
-        float: right;
         position: absolute;
-        right: 15px;
+        right: 37.6%;
         top: 60%;
         z-index: 999;
     }
@@ -229,7 +229,12 @@ body {
     .stickyControll {
         position: fixed;
         bottom: 0;
-        width: 67%;
+        width: -webkit-fill-available;
+        margin: 0 auto;
+
+        .container {
+            margin: unset;
+        }
     }
 
     .productLabel {
@@ -272,6 +277,7 @@ body {
         position: relative;
         top: -5px;
         left: 22%;
+        z-index:99999999;
         letter-spacing: 2px;
         z-index: 999;
         height: 54px;
@@ -326,6 +332,11 @@ body {
             left: -15px;
             margin-right: auto;
             width: 320px;
+        }
+
+        .warningWrapper {
+            left: unset;
+            right: -21vh;
         }
 
     }
