@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="ownStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- External js dependencies -->
     <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
@@ -55,7 +56,7 @@
                 </span>
                 <div class="row">
                     <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
+                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()"><i style="font-size:1.4em;margin-right:7px;" class="far fa-2x fa-chart-bar"></i>Open Chart</button>
                 </div>
             </div>
 
@@ -70,7 +71,7 @@
                         </p>
                         <div class="panel-heading" id="accordion">
                             <a type="button" class="col-12 btn btn-schuecoGreen" data-toggle="collapse" data-parent="#accordion"
-                                href="#collapseOne">Open Error Dialog</a>
+                                href="#collapseOne"><i style="font-size:1.4em;margin-right:7px;" class="fas fa-exclamation-triangle"></i>Open Error Dialog</a>
                         </div>
                     </div>
                 </div>
@@ -104,8 +105,8 @@
                                 <div class="container panel-footer">
                                     <div class="input-group">
                                         <div class="col-12 input-group-btn" style="display: flex;padding:0;">
-                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl">ACCEPT</button>
-                                            <button class="col-6 btn btn-warning btn-chat btn-xl">DECLINE</button>
+                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl"><i style="font-size:1.4em;margin-right:7px;" class="fas fa-check"></i>ACCEPT</button>
+                                            <button class="col-6 btn btn-warning btn-chat btn-xl"><i style="font-size:1.4em;margin-right:7px;" class="far fa-times-circle"></i>DECLINE</button>
                                         </div>
                                     </div>
                                 </div>

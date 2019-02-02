@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif !important;
     overflow-x: hidden;
 
     .sticky {
@@ -30,7 +30,7 @@ body {
         min-height: 380px;
         padding: unset;
         top: 50px;
-        display: flex;
+        display: block;
         left: 0;
     }
 
@@ -178,6 +178,9 @@ body {
         border: transparent;
         height: 64px;
         line-height: 48px;
+        &:focus {
+            box-shadow: unset !important;
+        }
     }
 
     .pull-right {
@@ -206,15 +209,20 @@ body {
         margin-left: -48px;
         margin-top: 100px;
         transform: scale(1.33);
-        margin-left: 9%;
+        margin-left: 12%;
+    }
+
+    .effectBlendIn {
+        animation: blendIn 1s infinite;
     }
 
     .downloadWrapper {
         display: flex;
     }
 
-    #chartArea {
-        display: block;
+    @keyframes blendIn {
+        from {transform: translateY(-100%);}
+        to {transform: translateY(100%);}
     }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
