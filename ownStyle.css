@@ -35,9 +35,10 @@ body .arrowTo {
 body #chartArea {
   position: relative;
   width: 100%;
-  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
   margin-right: 0;
-  max-height: 72vh;
+  max-height: 73vh;
   padding: unset;
   display: block;
   left: 0;
@@ -259,10 +260,11 @@ body .productLabel {
 
 body .chart-widget {
   display: block;
-  margin: 0 10vh;
-  padding: 0 15px;
-  margin-left: 0vh;
+  padding: unset;
+  margin: 0 auto;
+  position: relative;
   width: 100%;
+  left: 4em;
 }
 
 body .chart-widget:last-of-type {
@@ -344,6 +346,9 @@ body .warningWrapper {
   body .sticky {
     right: 0;
     width: 100%;
+  }
+  body .chart-widget {
+    left: 22px;
   }
   body .warningWrapper {
     left: unset;
