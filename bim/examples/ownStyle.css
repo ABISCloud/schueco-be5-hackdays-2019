@@ -229,26 +229,15 @@ body .productLabel {
 }
 
 body .chart-widget {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: block;
   width: 98%;
-  margin-left: -48px;
-  margin-top: 100px;
-  -webkit-transform: scale(1.33);
-          transform: scale(1.33);
-  margin-left: 12%;
+  margin-left: -38px;
+  margin-top: 13vh;
 }
 
 body .effectBlendIn {
   -webkit-animation: blendIn 1s infinite;
           animation: blendIn 1s infinite;
-}
-
-body .downloadWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 @-webkit-keyframes blendIn {
@@ -309,10 +298,11 @@ body .downloadWrapper {
     right: -15px;
   }
   body .chart-widget {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
-    margin-top: 110px;
-    margin-left: auto;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    margin-top: 13vh;
+    margin-left: 0vh;
+    bottom: 10vh;
     left: -15px;
     margin-right: auto;
     width: 320px;

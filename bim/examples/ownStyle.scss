@@ -228,20 +228,14 @@ body {
     }
 
     .chart-widget {
-        display: inline-flex;
+        display: block;
         width: 98%;
-        margin-left: -48px;
-        margin-top: 100px;
-        transform: scale(1.33);
-        margin-left: 12%;
+        margin-left: -38px;
+        margin-top: 13vh;
     }
 
     .effectBlendIn {
         animation: blendIn 1s infinite;
-    }
-
-    .downloadWrapper {
-        display: flex;
     }
 
     @keyframes blendIn {
@@ -281,9 +275,10 @@ body {
         }
 
         .chart-widget {
-            transform: scale(1.4);
-            margin-top: 110px;
-            margin-left: auto;
+            transform: scale(1.2);
+            margin-top: 13vh;
+            margin-left: 0vh;
+            bottom: 10vh;
             left: -15px;
             margin-right: auto;
             width: 320px;

@@ -253,7 +253,7 @@ body {
 
     .chart-widget {
         display: inline-flex;
-        margin-top: 17vh;
+        margin-top: 13vh;
         padding: 0 15px;
         margin-left: 0vh;
     }
@@ -263,7 +263,7 @@ body {
     }
 
     .downloadWrapper {
-        display: none;
+        display: flex;
         cursor: pointer;
         position: relative;
         top: 25px;
@@ -330,10 +330,6 @@ body {
 
         .warningWrapper {
             left: unset;
-        }
-
-        .downloadWrapper {
-            left: 68.5% !important;
         }
 
         #status .statusWrapper {

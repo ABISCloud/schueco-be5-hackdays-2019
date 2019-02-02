@@ -15,6 +15,7 @@ class Chart {
         this._headerContainer.style.letterSpacing = "2px";
         this._headerContainer.style.zIndex = "999";
         this._headerContainer.style.height = "33px";
+        this._headerContainer.style.width = "100%";
         this._headerContainer.style.fontSize = "12px";
         this._headerContainer.style.padding = "8px";
         this._headerContainer.style.background = "#78b928";
@@ -51,9 +52,8 @@ class Chart {
         this._chartContainer.id = selectedSensor.name;
         this._chartContainer.style.width = '100%';
         this._chartContainer.className = 'container';
-        this._chartContainer.style.height = '360px';
+        this._chartContainer.style.height = '340px';
         this._chartContainer.style.padding = 'unset';
-        this._chartContainer.style.left = '-4%';
 
         this._sensor = sensor;
 

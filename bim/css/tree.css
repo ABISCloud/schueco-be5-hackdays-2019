@@ -15,7 +15,7 @@
 }
 
 .bimsurfer-static-tree div.label {
-    margin-left: -100px;
+    margin-left: -chart-widget;
     padding-left: 100px;
     width: 1000px;
     cursor: pointer;
