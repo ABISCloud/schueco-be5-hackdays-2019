@@ -33,12 +33,12 @@ body {
         overflow-x: hidden;
         overflow-y: scroll;
         margin-right: 0;
-        max-height: 73vh;
-        min-height: 73vh;
+        max-height: 70vh;
+        min-height: 70vh;
         padding: unset;
         display: block;
         left: 0;
-        top: 88px;
+        top: 92px;
         border-left: 1px inset rgba(255,255,255,0.3);
 
         &:last-of-type {
@@ -57,6 +57,14 @@ body {
     img.logo {
         width: 88%;
         max-height: auto;
+    }
+
+    .bg-light {
+        background: #f2f2f2 !important;
+    }
+
+    .navbar {
+        padding: 0 1rem;
     }
 
     .navbar-toggler {
