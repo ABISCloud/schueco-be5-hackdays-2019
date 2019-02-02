@@ -7,8 +7,13 @@ body {
 body .sticky {
   position: fixed;
   top: 0;
-  height: 54px;
+  padding-top: unset;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 88px;
   z-index: 999;
+  margin: 0 auto;
 }
 
 body .arrowTo {
@@ -40,7 +45,7 @@ body img.logo {
 
 body .navbar-toggler {
   position: absolute;
-  right: 15px;
+  left: 15px;
 }
 
 body .errorStatus {
@@ -185,9 +190,18 @@ body .stickyControll {
   width: 67%;
 }
 
+body .productLabel {
+  color: #78b928;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   body .stickyControll {
     width: 100%;
+  }
+  body .sticky {
+    right: 0;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */

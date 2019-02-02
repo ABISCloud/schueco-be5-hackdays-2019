@@ -4,8 +4,11 @@ body {
     .sticky {
         position: fixed;
         top: 0;
-        height: 54px;
+        padding-top: unset;
+        display: inline-flex;
+        height: 88px;
         z-index: 999;
+        margin: 0 auto;
     }
 
     .arrowTo {
@@ -39,7 +42,7 @@ body {
 
     .navbar-toggler {
         position: absolute;
-        right: 15px;
+        left: 15px;
     }
 
     .errorStatus {
@@ -49,9 +52,10 @@ body {
     //Status
     #status {
         padding: unset;
+
         .statusWrapper {
-            border: 1px solid rgba(0,0,0,.1);
-      
+            border: 1px solid rgba(0, 0, 0, .1);
+
             margin: 0 auto;
             padding: 15px;
             display: grid;
@@ -76,6 +80,7 @@ body {
             box-shadow: unset;
             padding: 0;
             margin: 0 auto;
+
             a {
                 height: 32px;
                 border: transparent;
@@ -88,6 +93,7 @@ body {
     // Chat Snippet
     #chat {
         width: 100%;
+
         .chat {
             list-style: none;
             margin: 0;
@@ -180,12 +186,18 @@ body {
         width: 67%;
     }
 
-    @media only screen 
-    and (min-device-width: 320px) 
-    and (max-device-width: 480px)
-    and (-webkit-min-device-pixel-ratio: 2) {
+    .productLabel {
+        color: #78b928;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         .stickyControll {
             width: 100%;
+        }
+        .sticky {
+            right: 0;
         }
     }
 }
