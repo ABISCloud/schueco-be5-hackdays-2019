@@ -398,8 +398,8 @@ body .noMobile {
     display: none;
   }
   body #status .statusWrapper {
-    -ms-grid-columns: 72px 24% 72px 72px;
-        grid-template-columns: 72px 24% 72px 72px;
+    -ms-grid-columns: 72px 1fr 72px 72px;
+        grid-template-columns: 72px 1fr 72px 72px;
   }
   body #status .statusWrapper p {
     font-size: inherit;

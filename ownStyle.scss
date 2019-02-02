@@ -361,7 +361,7 @@ body {
         }
 
         #status .statusWrapper {
-            grid-template-columns: 72px 24% 72px 72px;
+            grid-template-columns: 72px 1fr 72px 72px;
 
             p {
                 font-size: inherit;
