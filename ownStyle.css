@@ -1,5 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web|Open+Sans:400italic,700italic,400,700);
+:root {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #f2f2f2;
   color: #444;
 }
@@ -31,6 +35,7 @@ body #chartArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  left: 9%;
 }
 
 body .chartWrapper {
@@ -200,8 +205,11 @@ body .chart-widget {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 90%;
+  width: 92%;
   margin-left: -48px;
+  margin-top: 100px;
+  -webkit-transform: scale(1.33);
+          transform: scale(1.33);
 }
 
 body .downloadWrapper {
@@ -220,6 +228,12 @@ body .downloadWrapper {
   body #chartArea {
     display: -ms-inline-grid;
     display: inline-grid;
+    left: 0;
+  }
+  body .chart-widget {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    margin-top: 40px;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */
