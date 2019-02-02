@@ -93,6 +93,10 @@ body #chat .chat li.right .chat-body {
   margin-left: 15px;
 }
 
+body #chat .primary-font {
+  font-size: 24px;
+}
+
 body #chat .chat li .chat-body p {
   margin: 0;
   color: #777777;
