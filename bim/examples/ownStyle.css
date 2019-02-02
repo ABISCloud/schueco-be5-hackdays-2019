@@ -12,7 +12,6 @@ body {
 
 body .sticky {
   position: fixed;
-  width: 94%;
   top: 0;
   padding-top: unset;
   display: -webkit-inline-box;
@@ -32,10 +31,9 @@ body .arrowTo {
 body #chartArea {
   position: relative;
   width: 100%;
-  overflow: hidden;
-  margin-right: 0;
-  min-height: 78.5vh;
+  min-height: 380px;
   padding: unset;
+  top: 50px;
   display: block;
   left: 0;
 }
@@ -63,10 +61,6 @@ body .errorStatus {
   padding: unset;
 }
 
-body .warningButton {
-  z-index: 999;
-}
-
 body .mapsWrapper iframe {
   width: 100%;
   height: 400px;
@@ -80,8 +74,8 @@ body .statusIndicator {
   border-radius: 50%;
   border: 1px solid grey;
   border-radius: 50%;
-  -webkit-animation: indicator 2s alternate infinite;
-          animation: indicator 2s alternate infinite;
+  -webkit-animation: indicator .8s alternate infinite;
+          animation: indicator .8s alternate infinite;
 }
 
 body .statusIndicator i {
@@ -100,8 +94,8 @@ body #status .statusWrapper {
   display: grid;
   -ms-grid-row: 72;
   grid-row: 72px;
-  -ms-grid-columns: 72px 1fr 72px;
-      grid-template-columns: 72px 1fr 72px;
+  -ms-grid-columns: 72px 1fr;
+      grid-template-columns: 72px 1fr;
   grid-gap: 15px;
 }
 
@@ -178,10 +172,8 @@ body #chat .chat .glyphicon {
 }
 
 body #chat .text-muted {
-  right: 4%;
-  top: -3.8em;
+  right: 1rem;
   position: relative;
-  z-index: 999;
 }
 
 body #chat .panel-body {
@@ -207,7 +199,7 @@ body .btn-schuecoGreen {
   border-radius: unset !important;
   background-color: #78b928;
   border: transparent;
-  height: 54px;
+  height: 64px;
   line-height: 48px;
 }
 
@@ -227,12 +219,7 @@ body .pull-left {
 body .stickyControll {
   position: fixed;
   bottom: 0;
-  width: -webkit-fill-available;
-  margin: 0 auto;
-}
-
-body .stickyControll .container {
-  margin: unset;
+  width: 67%;
 }
 
 body .productLabel {
@@ -245,11 +232,12 @@ body .chart-widget {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 90%;
-  margin-top: 12vh;
-  margin-left: 16%;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  width: 98%;
+  margin-left: -48px;
+  margin-top: 100px;
+  -webkit-transform: scale(1.33);
+          transform: scale(1.33);
+  margin-left: 12%;
 }
 
 body .effectBlendIn {
@@ -261,38 +249,6 @@ body .downloadWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
-  position: relative;
-  top: 25px;
-  left: 75% !important;
-  letter-spacing: 2px;
-  z-index: 999;
-  height: 30px;
-  font-size: 12px;
-  padding: unset;
-  background: #78b928;
-  color: #833333;
-}
-
-body .downloadWrapper a {
-  padding: 0 8px;
-}
-
-body .warningWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  position: relative;
-  z-index: 99999999;
-  letter-spacing: 2px;
-  z-index: 999;
-  height: 72px;
-  font-size: 12px;
-  padding: 8px 23px;
-  line-height: 66px;
-  background: #78b928;
-  color: #f5f5f5;
 }
 
 @-webkit-keyframes blendIn {
@@ -347,21 +303,19 @@ body .warningWrapper {
   }
   body .sticky {
     right: 0;
-    width: 100%;
+  }
+  body #chartArea {
+    width: 382px;
+    right: -15px;
   }
   body .chart-widget {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
-    margin-top: 16vh;
-    margin-bottom: 1vh;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    margin-top: 110px;
+    margin-left: auto;
     left: -15px;
+    margin-right: auto;
     width: 320px;
-  }
-  body .warningWrapper {
-    left: unset;
-  }
-  body .downloadWrapper {
-    left: 68.5% !important;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */

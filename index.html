@@ -31,8 +31,8 @@
     <script src="application.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
-<body class="container">
-    <nav class="sticky text-center container navbar navbar-expand-lg navbar-light bg-light">
+<body class="container" style="padding: unset;">
+    <nav class="row sticky text-center container navbar navbar-expand-lg navbar-light bg-light">
         <div class="col-12">
             <a class="navbar-brand" href="#" style="width:200px;">
                 <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
@@ -48,84 +48,87 @@
     <div class="row chartWrapper col-md-12 col-xs-12" style="margin: 0 auto;">
         <div id="chartArea" class="container"></div>
     </div>
-
-    <div>
-        <div class="row bg-light stickyControll">
-            <div class="container">
-                <span class="arrowTo">
-                    <img src="./assets/images/arrow-to.png" alt="arrow" />
-                </span>
-                <div class="row">
-                    <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()"><i style="font-size:1.4em;margin-right:7px;"
-                            class="far fa-2x fa-chart-bar"></i>Open Chart</button>
-                </div>
+    <div class="row stickyControll">
+        <div class="container">
+            <span class="arrowTo">
+                <img src="./assets/images/arrow-to.png" alt="arrow" />
+            </span>
+            <div class="row">
+                <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+                <button class="col-6 btn btn-schuecoGreen" onclick="addChart()"><i style="font-size:1.4em;margin-right:7px;"
+                        class="far fa-2x fa-chart-bar"></i>Open Chart</button>
             </div>
+        </div>
 
-            <div id="status" class="container bg-light">
-                <div class="statusWrapper">
-                    <div class="left">
-                        <!--<img src="http://placehold.it/72/72" alt="alt" />-->
-                        <div class="statusIndicator">
-                            <i class="fas fa-2x fa-cloud-showers-heavy"></i>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <p>Buildung A 4th floor:<br>
-                            <b>Sensor id 12344-34</b>
-                        </p>
-                        <div class="warningButton panel-heading pull-right" id="accordion">
-                            <span class="warningWrapper">
-                                <a data-toggle="collapse" data-parent="#accordion"
-                                    href="#collapseOne"><i style="color: #FFF;" class="fas fa-2x fa-exclamation-triangle"></i>
-                                </a>
-                            </span>
-                        </div>
+        <div id="status" class="container bg-light">
+            <div class="statusWrapper">
+                <div class="left">
+                    <!--<img src="http://placehold.it/72/72" alt="alt" />-->
+                    <div class="statusIndicator">
+                        <i class="fas fa-2x fa-cloud-showers-heavy"></i>
                     </div>
                 </div>
+                <div class="right">
+                    <p>Buildung A 4th floor:<br>
+                        <b>Sensor id 12344-34</b>
+                    </p>
+                </div>
+                <div class="warningButton panel-heading pull-right" id="accordion">
+                    <span class="warningWrapper">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><i style="color: #FFF;"
+                                class="fas fa-2x fa-exclamation-triangle"></i>
+                        </a>
+                    </span>
+                </div>
             </div>
+        </div>
 
-            <div id="chat">
-                <div class="container errorStatus">
-                    <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
-                        <div class="panel panel-primary">
-                            <div class="panel-collapse collapse" id="collapseOne">
-                                <div class="panel-body">
-                                    <ul class="chat">
-                                        <li class="left clearfix"><span class="chat-img pull-left">
-                                                <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
-                                                    alt="User Avatar" class="img-circle" />
-                                            </span>
-                                            <div class="chat-body clearfix">
-                                                <div class="header">
-                                                    <strong class="primary-font">Alert: Need window fix!</strong>
-                                                    <small class="pull-right text-muted">
-                                                        <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>WARNING
-                                                        FC3Dx366</small>
-                                                </div>
-                                                <p>
-                                                    <b>Want to start a micro maintenance task D433XSC?</b>
-                                                </p>
+        <div id="chat">
+            <div class="container errorStatus">
+                <div class="errorWrapper col-md-12 col-xs-12" style="padding:unset">
+                    <div class="panel panel-primary">
+                        <div class="panel-collapse collapse" id="collapseOne">
+                            <div class="panel-body">
+                                <ul class="chat">
+                                    <li class="left clearfix"><span class="chat-img pull-left">
+                                            <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
+                                                alt="User Avatar" class="img-circle" />
+                                        </span>
+                                        <div class="chat-body clearfix">
+                                            <div class="header">
+                                                <strong class="primary-font">Alert: Need window fix!</strong>
+                                                <small class="pull-right text-muted">
+                                                    <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>WARNING
+                                                    FC3Dx366</small>
                                             </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="container panel-footer">
-                                    <div class="input-group">
-                                        <div class="col-12 input-group-btn" style="display: flex;padding:0;">
-                                            <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl" href="#collapseTwo" data-toggle="collapse" data-parent="#collapseTwo"><i
-                                                    style="font-size:1.4em;margin-right:7px;" class="fas fa-check"></i>ACCEPT</button>
-                                            <button class="col-6 btn btn-warning btn-chat btn-xl"><i style="font-size:1.4em;margin-right:7px;"
-                                                    class="far fa-times-circle"></i>DECLINE</button>
+                                            <p>
+                                                <b>Want to start a micro maintenance task D433XSC?</b>
+                                            </p>
                                         </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="container panel-footer">
+                                <div class="input-group">
+                                    <div class="col-12 input-group-btn" style="display: flex;padding:0;">
+                                        <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl" href="#collapseTwo"
+                                            data-toggle="collapse" data-parent="#collapseTwo"><i style="font-size:1.4em;margin-right:7px;"
+                                                class="fas fa-check"></i>ACCEPT</button>
+                                        <button class="col-6 btn btn-warning btn-chat btn-xl">
+                                            <a style="color:#FFF;" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                                <i style="font-size:1.4em;margin-right:7px;" class="far fa-times-circle"></i>
+                                                DECLINE
+                                            </a>
+                                        </button>
+
                                     </div>
                                 </div>
-                                
-                                <div class="mapsWrapper">
-                                        <div class="collapse panel-collapse" id="collapseTwo">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d5117748.802956131!2d-0.24681423238265524!3d52.04033503286299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e1!4m3!3m2!1d48.2681689!2d11.6661062!4m5!1s0x4887c786156c3b5d%3A0xb21928d390bbc0ee!2sUniversity+of+Edinburgh%2C+Old+College%2C+South+Bridge%2C+Edinburgh+EH8+9YL%2C+Vereinigtes+K%C3%B6nigreich!3m2!1d55.9445158!2d-3.1892413!5e1!3m2!1sde!2sde!4v1549103242907"
-                                            frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>
+                            </div>
+
+                            <div class="mapsWrapper">
+                                <div class="collapse panel-collapse" id="collapseTwo">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d5117748.802956131!2d-0.24681423238265524!3d52.04033503286299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e1!4m3!3m2!1d48.2681689!2d11.6661062!4m5!1s0x4887c786156c3b5d%3A0xb21928d390bbc0ee!2sUniversity+of+Edinburgh%2C+Old+College%2C+South+Bridge%2C+Edinburgh+EH8+9YL%2C+Vereinigtes+K%C3%B6nigreich!3m2!1d55.9445158!2d-3.1892413!5e1!3m2!1sde!2sde!4v1549103242907"
+                                        frameborder="0" style="border:0" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
