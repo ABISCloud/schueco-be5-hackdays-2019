@@ -1,171 +1,178 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-  .sticky {
-      position: fixed;
-      top: 0;
-      height: 54px;
-      z-index: 999;
-  }
-
-  .arrowTo {
-      position: relative;
-      left: 48%;
-      height: 24px;
-  }
-
-  #chartArea {
-      position: relative;
-      width: 100%;
-      min-height: 380px;
-      padding: unset;
-      top: 50px;
-      display: flex;
-  }
-
-  .chartWrapper {
-      margin-top: 54px;
-      padding: unset;
-  }
-
   background: #f2f2f2;
   color: #444;
-
-  img.logo {
-      width: 98%;
-      max-height: auto;
-  }
-
-  .navbar-toggler {
-      position: absolute;
-      right: 15px;
-  }
-
-  //Status
-  #status {
-      width: 100%;
-      .statusWrapper {
-          border: 1px solid rgba(0,0,0,.1);
-          width: 100%;
-          margin: 0 auto;
-          padding: 15px;
-          display: grid;
-          grid-row: 72px;
-          grid-template-columns: 72px 1fr;
-          grid-gap: 15px;
-
-          img {
-              border-radius: 50%;
-          }
-
-          p {
-              padding: 15px 0;
-              line-height: 20px;
-              font-size: 20px;
-              margin-bottom: unset;
-          }
-      }
-
-      .chatButton {
-          border: #78b928 !important;
-          box-shadow: unset;
-          padding: 0;
-          margin: 0 auto;
-          a {
-              height: 32px;
-              border: transparent;
-              box-shadow: unset;
-              background: #78b928;
-          }
-      }
-  }
-
-  // Chat Snippet
-  #chat {
-      width: 100%;
-      .chat {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-      }
-
-      .errorWrapper {
-          background: #f2f2f2;
-          width: 100%;
-      }
-
-      .img-circle {
-          border-radius: 50%;
-          width: 72px;
-          max-height: auto;
-          margin: 0 15px;
-      }
-
-      .chat li {
-          padding: 15px 0;
-      }
-
-      .chat li.left .chat-body {
-          margin-left: 60px;
-      }
-
-      .chat li.right .chat-body {
-          margin-right: 60px;
-          margin-left: 15px;
-      }
-
-      .primary-font {
-          font-size: 24px;
-      }
-
-      .chat li .chat-body p {
-          margin: 0;
-          color: #777777;
-      }
-
-      .panel .slidedown .glyphicon,
-      .chat .glyphicon {
-          margin-right: 5px;
-      }
-
-      .text-muted {
-          right: 1rem;
-          position: relative;
-      }
-
-      .panel-body {
-          overflow-y: hidden;
-      }
-
-      .panel-footer {
-          padding: unset;
-      }
-
-      .input-group {
-          height: 58px;
-          background: #FFF;
-      }
-
-      .btn-chat {
-          height: 58px;
-          border-radius: unset;
-      }
-
-  }
-
-  .btn-schuecoGreen {
-      color: #fff;
-      border-radius: unset !important;
-      background-color: #78b928;
-      border-color: #78b928;
-      height: 38px;
-  }
-
-  .pull-right {
-      float: right;
-  }
-
-  .pull-left {
-      float: left;
-  }
 }
+
+body .sticky {
+  position: fixed;
+  top: 0;
+  height: 54px;
+  z-index: 999;
+}
+
+body .arrowTo {
+  position: relative;
+  left: 48%;
+  height: 24px;
+}
+
+body #chartArea {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  padding: unset;
+  top: 50px;
+  display: -ms-grid;
+  display: grid;
+}
+
+body .chartWrapper {
+  margin-top: 54px;
+  padding: unset;
+}
+
+body img.logo {
+  width: 98%;
+  max-height: auto;
+}
+
+body .navbar-toggler {
+  position: absolute;
+  right: 15px;
+}
+
+body #status {
+  width: 100%;
+  padding-top: 22px;
+}
+
+body #status .statusWrapper {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 72;
+  grid-row: 72px;
+  -ms-grid-columns: 72px 1fr;
+      grid-template-columns: 72px 1fr;
+  grid-gap: 15px;
+}
+
+body #status .statusWrapper img {
+  border-radius: 50%;
+}
+
+body #status .statusWrapper p {
+  padding: 15px 0;
+  line-height: 20px;
+  font-size: 20px;
+  margin-bottom: unset;
+}
+
+body #status .chatButton {
+  border: #78b928 !important;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: 0;
+  margin: 0 auto;
+}
+
+body #status .chatButton a {
+  height: 32px;
+  border: transparent;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  background: #78b928;
+}
+
+body #chat {
+  width: 100%;
+}
+
+body #chat .chat {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body #chat .errorWrapper {
+  background: #f2f2f2;
+  width: 100%;
+}
+
+body #chat .img-circle {
+  border-radius: 50%;
+  width: 72px;
+  max-height: auto;
+  margin: 0 15px;
+}
+
+body #chat .chat li {
+  padding: 15px 0;
+}
+
+body #chat .chat li.left .chat-body {
+  margin-left: 60px;
+}
+
+body #chat .chat li.right .chat-body {
+  margin-right: 60px;
+  margin-left: 15px;
+}
+
+body #chat .primary-font {
+  font-size: 24px;
+}
+
+body #chat .chat li .chat-body p {
+  margin: 0;
+  color: #777777;
+}
+
+body #chat .panel .slidedown .glyphicon,
+body #chat .chat .glyphicon {
+  margin-right: 5px;
+}
+
+body #chat .text-muted {
+  right: 1rem;
+  position: relative;
+}
+
+body #chat .panel-body {
+  overflow-y: hidden;
+}
+
+body #chat .panel-footer {
+  padding: unset;
+}
+
+body #chat .input-group {
+  height: 58px;
+  background: #FFF;
+}
+
+body #chat .btn-chat {
+  height: 58px;
+  border-radius: unset;
+}
+
+body .btn-schuecoGreen {
+  color: #fff;
+  border-radius: unset !important;
+  background-color: #78b928;
+  border-color: #78b928;
+  height: 38px;
+}
+
+body .pull-right {
+  float: right;
+}
+
+body .pull-left {
+  float: left;
+}
+/*# sourceMappingURL=ownStyle.css.map */
