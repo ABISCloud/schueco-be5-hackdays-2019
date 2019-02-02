@@ -408,5 +408,13 @@ body .noMobile {
   body .downloadWrapper {
     display: none;
   }
+  body .poweredByAbis {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    right: -13.55em;
+    top: 25.75vh;
+    z-index: 9999999;
+  }
 }
 /*# sourceMappingURL=ownStyle.css.map */

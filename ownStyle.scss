@@ -39,7 +39,7 @@ body {
         display: block;
         left: 0;
         top: 92px;
-        border-left: 1px inset rgba(255,255,255,0.3);
+        border-left: 1px inset rgba(255, 255, 255, 0.3);
 
         &:last-of-type {
             bottom: 10%;
@@ -314,9 +314,11 @@ body {
         5% {
             background: green;
         }
+
         50% {
             background: orange;
         }
+
         75% {
             background: red;
         }
@@ -371,6 +373,15 @@ body {
 
         .downloadWrapper {
             display: none;
+        }
+
+        .poweredByAbis {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            right: -13.55em;
+            top: 25.75vh;
+            z-index: 9999999;
         }
 
     }
