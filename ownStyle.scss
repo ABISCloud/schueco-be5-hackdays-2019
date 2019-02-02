@@ -29,12 +29,13 @@ body {
     #chartArea {
         position: relative;
         width: 100%;
-        overflow: hidden;
+        overflow-y: auto;
         margin-right: 0;
-        min-height: 76.5vh;
+        max-height: 86vh;
         padding: unset;
         display: block;
         left: 0;
+        top: 88px;
 
         &:last-of-type {
             bottom: 10%;
@@ -252,10 +253,11 @@ body {
     }
 
     .chart-widget {
-        display: inline-flex;
-        margin-top: 13vh;
+        display: block;
+        margin: 0 5vh;
         padding: 0 15px;
         margin-left: 0vh;
+        width: 100%;
     }
 
     .effectBlendIn {
