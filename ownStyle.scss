@@ -52,8 +52,27 @@ body {
         left: 15px;
     }
 
+    .panel-heading {
+        text-align: center;
+    }
+
     .errorStatus {
         padding: unset;
+    }
+
+    .statusIndicator {
+        text-align: center;
+        width:72px;
+        height:72px;
+        line-height:82px;
+        border-radius: 50%;
+        border: 1px solid grey;
+        border-radius: 50%;
+        animation: indicator .8s alternate infinite;
+
+        i {
+            color: #FFF;
+        }
     }
 
     //Status
@@ -69,10 +88,6 @@ body {
             grid-row: 72px;
             grid-template-columns: 72px 1fr;
             grid-gap: 15px;
-
-            img {
-                border-radius: 50%;
-            }
 
             p {
                 padding: 15px 0;
@@ -223,6 +238,17 @@ body {
     @keyframes blendIn {
         from {transform: translateY(-100%);}
         to {transform: translateY(100%);}
+    }
+
+    @keyframes indicator {
+        from {
+            background: #78b928;
+            border: #fc0101;
+        }
+        to {
+            transform: #fc0101;
+            border: #78b928;
+        }
     }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
