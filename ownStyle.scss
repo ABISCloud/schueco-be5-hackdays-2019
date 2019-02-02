@@ -20,10 +20,12 @@ body {
         min-height: 380px;
         padding: unset;
         top: 50px;
+        display: flex;
     }
 
     .chartWrapper {
         margin-top: 54px;
+        padding: unset;
     }
 
     background: #f2f2f2;
@@ -133,6 +135,10 @@ body {
 
         .panel-body {
             overflow-y: hidden;
+        }
+
+        .panel-footer {
+            padding: unset;
         }
 
         .input-group {
