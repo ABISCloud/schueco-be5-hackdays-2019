@@ -45,10 +45,6 @@ $(() => {
     property.connect(() => {
         updateSensorDropDown();
     });
-
-    property.connection.registerMessageCallback("userdefined_string_1", (message) => {
-        time.innerText = message.value;
-    });
 });
 
 
