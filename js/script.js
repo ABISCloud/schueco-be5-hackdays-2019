@@ -8,7 +8,7 @@
              * @param propertyId
              */
             constructor(propertyId) {
-                this._endpoint = "ws://schuecobe5hackdays.azurewebsites.net/WebSocketServer.ashx?";
+                this._endpoint = "wss://piraten30.abis-cloud.com/schueco";
                 this._webSocket = new WebSocket(this._endpoint);
                 this._history = [];
                 this._waitCallbacks = {};
