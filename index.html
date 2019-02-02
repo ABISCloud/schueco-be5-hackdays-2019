@@ -33,26 +33,27 @@
             <a class="navbar-brand" href="#" style="width:200px;">
                 <img class="logo" src="./assets/images/logo-schueco-2019.png" onerror="this.onerror=null;this.src='https://placeimg.com/200/300/animals';" />
             </a>
-            <select class="btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
             <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>-->
         </nav>
     </div>
+    
     <div class="row bg-light">
-        <div class="col-12">
-            <div class="chartWrapper col-md-12 col-xs-12">
-            <div id="chartArea" class="col-md-12 col-xs-12"></div>
+            <div class="col-12">
+                <div class="chartWrapper col-md-12 col-xs-12">
+                    <div id="chartArea" class="col-md-12 col-xs-12"></div>
+                </div>
+                <span class="arrowTo">
+                    <img src="./assets/images/arrow-to.png" alt="arrow" />
+                </span>
+                <div class="row form-group">
+                    <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
+                    <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
+                </div>
+            </div>
         </div>
-        <span class="arrowTo">
-            <img src="./assets/images/arrow-to.png" alt="arrow" />
-        </span>
-        <div class="row form-group">
-            <select class="col-6 btn-xl btn btn-schuecoGreen" id="valueNameSelect" onchange="chartValueNameChanged()"></select>
-            <button class="col-6 btn btn-schuecoGreen" onclick="addChart()">Open Chart</button>
-        </div>
-    </div>
 
     <div id="status" class="container bg-light">
         <div class="statusWrapper">
