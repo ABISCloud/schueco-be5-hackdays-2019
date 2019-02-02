@@ -32,6 +32,7 @@ body {
         top: 50px;
         display: block;
         left: 0;
+        margin-bottom: 30%;
     }
 
     .chartWrapper {
@@ -60,6 +61,14 @@ body {
         padding: unset;
     }
 
+    .warningButton {
+        float: right;
+        position: absolute;
+        right: 15px;
+        top: 60%;
+        z-index: 999;
+    }
+
     .mapsWrapper {
 
         iframe {
@@ -76,7 +85,7 @@ body {
         border-radius: 50%;
         border: 1px solid grey;
         border-radius: 50%;
-        animation: indicator .8s alternate infinite;
+        animation: indicator 2s alternate infinite;
 
         i {
             color: #FFF;
@@ -170,8 +179,10 @@ body {
         }
 
         .text-muted {
-            right: 1rem;
+            right: 4%;
+            top: -3.8em;
             position: relative;
+            z-index: 999;
         }
 
         .panel-body {
@@ -199,7 +210,7 @@ body {
         border-radius: unset !important;
         background-color: #78b928;
         border: transparent;
-        height: 64px;
+        height: 54px;
         line-height: 48px;
 
         &:focus {
@@ -242,6 +253,33 @@ body {
 
     .downloadWrapper {
         display: flex;
+        cursor: pointer;
+        position: relative;
+        top: 25px;
+        left: 21%;
+        letter-spacing: 2px;
+        z-index: 999;
+        height: 30px;
+        font-size: 12px;
+        padding: 8px;
+        background: #78b928;
+        color: #f5f5f5;
+    }
+
+    .warningWrapper {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        top: -5px;
+        left: 22%;
+        letter-spacing: 2px;
+        z-index: 999;
+        height: 54px;
+        font-size: 12px;
+        padding: 8px 23px;
+        line-height: 45px;
+        background: #78b928;
+        color: #f5f5f5;
     }
 
     @keyframes blendIn {
@@ -278,6 +316,7 @@ body {
         #chartArea {
             width: 382px;
             right: -15px;
+            margin-bottom: 33% !important;
         }
 
         .chart-widget {
@@ -288,5 +327,6 @@ body {
             margin-right: auto;
             width: 320px;
         }
+
     }
 }

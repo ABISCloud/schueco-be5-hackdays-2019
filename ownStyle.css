@@ -36,6 +36,7 @@ body #chartArea {
   top: 50px;
   display: block;
   left: 0;
+  margin-bottom: 30%;
 }
 
 body .chartWrapper {
@@ -61,6 +62,14 @@ body .errorStatus {
   padding: unset;
 }
 
+body .warningButton {
+  float: right;
+  position: absolute;
+  right: 15px;
+  top: 60%;
+  z-index: 999;
+}
+
 body .mapsWrapper iframe {
   width: 100%;
   height: 400px;
@@ -74,8 +83,8 @@ body .statusIndicator {
   border-radius: 50%;
   border: 1px solid grey;
   border-radius: 50%;
-  -webkit-animation: indicator .8s alternate infinite;
-          animation: indicator .8s alternate infinite;
+  -webkit-animation: indicator 2s alternate infinite;
+          animation: indicator 2s alternate infinite;
 }
 
 body .statusIndicator i {
@@ -172,8 +181,10 @@ body #chat .chat .glyphicon {
 }
 
 body #chat .text-muted {
-  right: 1rem;
+  right: 4%;
+  top: -3.8em;
   position: relative;
+  z-index: 999;
 }
 
 body #chat .panel-body {
@@ -199,7 +210,7 @@ body .btn-schuecoGreen {
   border-radius: unset !important;
   background-color: #78b928;
   border: transparent;
-  height: 64px;
+  height: 54px;
   line-height: 48px;
 }
 
@@ -249,6 +260,35 @@ body .downloadWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  left: 21%;
+  letter-spacing: 2px;
+  z-index: 999;
+  height: 30px;
+  font-size: 12px;
+  padding: 8px;
+  background: #78b928;
+  color: #f5f5f5;
+}
+
+body .warningWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  top: -5px;
+  left: 22%;
+  letter-spacing: 2px;
+  z-index: 999;
+  height: 54px;
+  font-size: 12px;
+  padding: 8px 23px;
+  line-height: 45px;
+  background: #78b928;
+  color: #f5f5f5;
 }
 
 @-webkit-keyframes blendIn {
@@ -307,6 +347,7 @@ body .downloadWrapper {
   body #chartArea {
     width: 382px;
     right: -15px;
+    margin-bottom: 33% !important;
   }
   body .chart-widget {
     -webkit-transform: scale(1.4);
