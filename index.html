@@ -44,95 +44,65 @@
         </div>
         <button class="col-12 btn btn-schuecoGreen" onclick="download()">Download</button>
     </div>
-    
-    <div id="status">
-        <div class="panel-heading" id="accordion">
-            <button class="chatButton col-12 btn btn-elegant">
-                <a type="button" class="col-12 btn btn-default" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"></a>
-            </button>
+
+    <div id="status" class="row bg-light">
+        <div class="statusWrapper">
+            <div class="left">
+                <img src="http://placehold.it/72/72" alt="alt" />
+            </div>
+            <div class="right">
+                <p>Buildung A 4th floor:<br>
+                    <b>Sensor id 12344-34</b>
+                </p>
+                <div class="panel-heading" id="accordion">
+                    <button class="chatButton col-12 btn btn-elegant">
+                        <a type="button" class="col-12 btn btn-default" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseOne">Open Error Dialog</a>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="chat" class="bg-light">
+    <div id="chat">
         <div class="row">
-            <div class="col-md-12 col-xs-12">
+            <div class="col-md-12 col-xs-12" style="padding:unset">
                 <div class="panel panel-primary">
-                    
-                <div class="panel-collapse collapse" id="collapseOne">
-                    <div class="panel-body">
-                        <ul class="chat">
-                            <li class="left clearfix"><span class="chat-img pull-left">
-                                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
-                            </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
-                                            <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+
+                    <div class="panel-collapse collapse" id="collapseOne">
+                        <div class="panel-body">
+                            <ul class="chat">
+                                <li class="left clearfix"><span class="chat-img pull-left">
+                                        <img src="https://abis-cloud.de/wp-content/uploads/2018/07/dave-300x300.png"
+                                            alt="User Avatar" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Alert: Need window fix!</strong> <small class="pull-right text-muted">
+                                                <span class="glyphicon glyphicon-time" style="padding-right:30px;"></span>ERROR
+                                                FC3Dx366</small>
+                                        </div>
+                                        <p>
+                                            <b>Want to start a micro maintenance task D433XSC?</b>
+                                        </p>
                                     </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="container panel-footer">
+                            <div class="input-group">
+                                <div class="col-12 input-group-btn" style="display: flex;padding:0;">
+                                    <button class="col-6 btn btn-schuecoGreen btn-chat btn-xl">ACCEPT</button>
+                                    <button class="col-6 btn btn-warning btn-chat btn-xl">DECLINE</button>
                                 </div>
-                            </li>
-                            <li class="right clearfix"><span class="chat-img pull-right">
-                                <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
-                            </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
-                                        <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="left clearfix"><span class="chat-img pull-left">
-                                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
-                            </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <strong class="primary-font">Jack Sparrow</strong> <small class="pull-right text-muted">
-                                            <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="right clearfix"><span class="chat-img pull-right">
-                                <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
-                            </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
-                                        <strong class="pull-right primary-font">Bhaumik Patel</strong>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
-                            <span class="input-group-btn">
-                                <button class="btn btn-schuecoGreen btn-chat btn-sm" id="btn-chat">
-                                    Send</button>
-                            </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 <!-- Injects the usabilty for the prototype-->
 <script src="./js/script.js"></script>
+
 </html>
