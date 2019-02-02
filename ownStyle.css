@@ -1,9 +1,11 @@
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web|Open+Sans:400italic,700italic,400,700);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 :root {
   font-family: 'Titillium Web', sans-serif;
 }
 
 body {
+  font-family: 'Titillium Web', sans-serif !important;
+  overflow-x: hidden;
   background: #f2f2f2;
   color: #444;
 }
@@ -32,10 +34,8 @@ body #chartArea {
   min-height: 380px;
   padding: unset;
   top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  left: 9%;
+  display: block;
+  left: 0;
 }
 
 body .chartWrapper {
@@ -44,7 +44,7 @@ body .chartWrapper {
 }
 
 body img.logo {
-  width: 98%;
+  width: 88%;
   max-height: auto;
 }
 
@@ -177,8 +177,14 @@ body .btn-schuecoGreen {
   color: #fff;
   border-radius: unset !important;
   background-color: #78b928;
-  border-color: #78b928;
-  height: 54px;
+  border: transparent;
+  height: 64px;
+  line-height: 48px;
+}
+
+body .btn-schuecoGreen:focus {
+  -webkit-box-shadow: unset !important;
+          box-shadow: unset !important;
 }
 
 body .pull-right {
@@ -205,17 +211,45 @@ body .chart-widget {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 92%;
+  width: 98%;
   margin-left: -48px;
   margin-top: 100px;
   -webkit-transform: scale(1.33);
           transform: scale(1.33);
+  margin-left: 12%;
+}
+
+body .effectBlendIn {
+  -webkit-animation: blendIn 1s infinite;
+          animation: blendIn 1s infinite;
 }
 
 body .downloadWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@-webkit-keyframes blendIn {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+}
+
+@keyframes blendIn {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -226,14 +260,17 @@ body .downloadWrapper {
     right: 0;
   }
   body #chartArea {
-    display: -ms-inline-grid;
-    display: inline-grid;
-    left: 0;
+    width: 382px;
+    right: -15px;
   }
   body .chart-widget {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    margin-top: 40px;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    margin-top: 110px;
+    margin-left: auto;
+    left: -15px;
+    margin-right: auto;
+    width: 320px;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */
