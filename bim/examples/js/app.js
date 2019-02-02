@@ -19,14 +19,14 @@ require(["bimsurfer/src/BimSurfer.js", "bimsurfer/src/StaticTreeRenderer.js", "b
         model.getTree().then(function (tree) {
 
             var domtree = new StaticTreeRenderer({
-                domNode: 'treeContainer'
+                //domNode: 'treeContainer'
             });
             
             domtree.addModel({name: tree.name, id:model.model.roid, tree:tree});
             domtree.build();
 
             var metadata = new MetaDataRenderer({
-                domNode: 'dataContainer'
+                //domNode: 'dataContainer'
             });
             
             metadata.addModel({name: tree.name, id:model.model.roid, model:model});

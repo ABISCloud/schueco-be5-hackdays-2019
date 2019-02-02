@@ -1,4 +1,4 @@
-function highlight(oid, selected) {
+function highlight(selected) {
     // Clicking an explorer node fits the view to its object and selects
     if (selected.length) {
         bimSurfer.viewFit({
@@ -18,18 +18,67 @@ function getModelEntities () {
     return Object.keys(scene.entities).filter(o => o.length > 10);
 }
 
+function populateSensorList (property, map, selectedPart, Utils) {
+    let reveseMap ={};
+    Object.keys(map).forEach(key => {
+        let value = map[key];
+        reveseMap[value] = key;
+    });
+
+    let sensorList = document.getElementById("sensorList");
+    if (sensorList) {
+        sensorList.innerHTML = Object.keys(property.sensors).map(o => {
+            if (o === reveseMap[selectedPart]) {
+                return "<li><b>" + o + "</b></li>"
+            } else{
+                return "<li>" + o + "</li>"
+            }
+        }).join("");
+    }
+    sensorList.childNodes.forEach(o => {
+        o.onclick = (e) => {
+            if (!map[o.innerText]) {
+                return;
+            }
+            let id = map[o.innerText];
+            selectedPart = id;
+            highlight([Utils.CompressGuid(id.split("#")[1].substr(8, 36).replace(/-/g, ""))])
+            populateSensorList(property, map, selectedPart, Utils);
+        };
+    });
+};
 require([
     "bimsurfer/src/BimSurfer",
     "bimsurfer/src/StaticTreeRenderer",
     "bimsurfer/src/MetaDataRenderer",
     "bimsurfer/src/Request",
     "bimsurfer/src/Utils",
+    "examples/lib/Chart",
+    "examples/lib/Property",
+    "examples/lib/PropertyConnection",
+    "examples/lib/Sensor",
     "bimsurfer/lib/domReady!",
+    "examples/application"
 ],
 function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     var bimSurfer = new BimSurfer({
         domNode: "viewerContainer"
     });
+
+    let map = {
+        "room4th_blind_state": "47#product-6b61ce71-1a7a-473c-8f87-4262e0bdc858-body.entity.0.0",
+        "room2nd_blind_state": "47#product-6b61ce71-1a7a-473c-8f87-4262e0bdb1c2-body.entity.0.0"
+    };
+
+    let property = new Property(221);
+    property.connect();
+
+    let selectedPart = null;
+
+    property.connection.registerMessageCallback("", o => {
+        populateSensorList(property, map, selectedPart, Utils);
+    });
+
     
     var modelName = window.location.hash;
     if (modelName.length < 1) {
@@ -46,7 +95,7 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     tree.build();
     
     tree.on("click", highlight);
-    
+
     var data = new MetaDataRenderer({
         domNode: "dataContainer"
     });
@@ -74,9 +123,8 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
 
     bimSurfer.on("selection-changed", function(selected) {
         data.setSelected(selected.objects.map(function(id) {
-            console.log("Selected part: ",id);
-            getModelEntities();
-
+            selectedPart = id;
+            populateSensorList(property, map, selectedPart, Utils);
             return Utils.CompressGuid(id.split("#")[1].substr(8, 36).replace(/-/g, ""));
         }));
     });

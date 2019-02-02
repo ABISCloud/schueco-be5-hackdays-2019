@@ -36,7 +36,7 @@ class Property {
                 let sensor = this._sensors[message.value_name];
 
                 if (!sensor) {
-                    sensor = new Sensor(message.value_name, property);
+                    sensor = new Sensor(message.value_name, self);
                     this._sensors[message.value_name] = sensor;
 
                     if (sensorsChanged) {
