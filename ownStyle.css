@@ -83,8 +83,8 @@ body .statusIndicator {
   border-radius: 50%;
   border: 1px solid grey;
   border-radius: 50%;
-  -webkit-animation: indicator .8s alternate infinite;
-          animation: indicator .8s alternate infinite;
+  -webkit-animation: indicator 2s alternate infinite;
+          animation: indicator 2s alternate infinite;
 }
 
 body .statusIndicator i {
@@ -210,7 +210,7 @@ body .btn-schuecoGreen {
   border-radius: unset !important;
   background-color: #78b928;
   border: transparent;
-  height: 64px;
+  height: 54px;
   line-height: 48px;
 }
 
@@ -260,6 +260,35 @@ body .downloadWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
+  position: relative;
+  top: 25px;
+  left: 21%;
+  letter-spacing: 2px;
+  z-index: 999;
+  height: 30px;
+  font-size: 12px;
+  padding: 8px;
+  background: #78b928;
+  color: #f5f5f5;
+}
+
+body .warningWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  top: 5px;
+  left: 24%;
+  letter-spacing: 2px;
+  z-index: 999;
+  height: 54px;
+  font-size: 12px;
+  padding: 8px 16px;
+  line-height: 45px;
+  background: #78b928;
+  color: #f5f5f5;
 }
 
 @-webkit-keyframes blendIn {
