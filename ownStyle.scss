@@ -202,6 +202,7 @@ body {
             margin: 0;
             color: #777777;
         }
+
         .panel .slidedown .glyphicon,
         .chat .glyphicon {
             margin-right: 5px;
@@ -250,7 +251,7 @@ body {
     .poweredByAbis {
         font-size: 13px;
         color: rgba(0, 0, 0, 0.3);
-        position: absolute;
+        position: fixed;
         right: -42.55em;
         top: 18.75vh;
         z-index: 9999999;
@@ -391,13 +392,12 @@ body {
         }
 
         .poweredByAbis {
-            font-size: 13px;
-            color: rgba(0, 0, 0, 0.8);
-            position: absolute;
-            right: -13.55em;
-            top: 25.75vh;
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.4);
+            position: fixed;
+            right: -12em;
+            top: 30em;
             z-index: 9999999;
         }
-
     }
 }
