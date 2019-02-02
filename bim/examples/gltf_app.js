@@ -1,22 +1,29 @@
 let map = {
-    "room4th_blind_state": "47#product-6b61ce71-1a7a-473c-8f87-4262e0bdc858-body.entity.0.0",
-    "room2nd_blind_state": "47#product-6b61ce71-1a7a-473c-8f87-4262e0bdb1c2-body.entity.0.0"
+    "room4th_blind_state": "47#product-7606d7eb-508f-40ce-a522-9b526ddc7201-body.entity.0.0",
+    "room2nd_blind_state": "47#product-6b61ce71-1a7a-473c-8f87-4262e0bdb448-body.entity.0.0"
 };
 
-function selectionChanged(id) {
-    bimSurfer.viewFit({
-        ids: [id],
-        animate: true
-    });
+function selectionChanged(bimsurfer, id, Utils, dontSelect) {
+    id = Utils.CompressGuid(id.split("#")[1].substr(8, 36).replace(/-/g, ""));
+    if (id) {
+        bimsurfer.viewFit({
+            ids: [id],
+            animate: true
+        });
+    }
 
-    bimSurfer.setSelection({
-        ids:[id],
-        clear:true,
-        selected:true
-    });
+    if (!dontSelect) {
+        bimsurfer.setSelection({
+            ids: [id],
+            clear: true,
+            selected: true
+        });
+    }
+
+    return id;
 }
 
-function populateSensorList (property, map, Utils) {
+function populateSensorList (bimSurfer, property, map, Utils) {
     let sensorList = document.getElementById("sensorList");
     if (sensorList) {
         sensorList.innerHTML = Object.keys(property.sensors).map(o => {
@@ -33,7 +40,7 @@ function populateSensorList (property, map, Utils) {
                 if (!id) {
                     return;
                 }
-                selectionChanged(id, Utils);
+                selectionChanged(bimSurfer, id, Utils);
             };
         });
     }
@@ -48,8 +55,7 @@ require([
     "examples/lib/Property",
     "examples/lib/PropertyConnection",
     "examples/lib/Sensor",
-    "bimsurfer/lib/domReady!",
-    "examples/application"
+    "bimsurfer/lib/domReady!"
 ],
 function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     var bimSurfer = new BimSurfer({
@@ -60,7 +66,7 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     property.connect();
 
     property.connection.registerMessageCallback("", o => {
-        populateSensorList(property, map, Utils);
+        populateSensorList(bimSurfer, property, map, Utils);
     });
     
     var modelName = window.location.hash;
@@ -92,10 +98,15 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
         bimSurfer.viewer.scene.canvas.canvas.style.display = 'block';
     });
 
+    var data = new MetaDataRenderer({
+        domNode: "dataContainer"
+    });
+    data.addModel({id: 1, src: modelName + ".xml"});
+
     bimSurfer.on("selection-changed", function(selected) {
         data.setSelected(selected.objects.map(function(id) {
-            selectionChanged(id, Utils);
-            return Utils.CompressGuid(id.split("#")[1].substr(8, 36).replace(/-/g, ""));
+            console.log(id);
+            return selectionChanged(bimSurfer, id, Utils, true);
         }));
     });
     
