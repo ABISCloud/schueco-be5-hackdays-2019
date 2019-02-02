@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 
+// global Vars for CI
+$schuecoGreen: $schuecoGreen;
+$schuecoGrey: #f2f2f2;
+$background: $backgroundFFF;
+$mainHeight: $mainHeight;
+
 :root {
     font-family: 'Titillium Web', sans-serif;
 }
@@ -7,10 +13,13 @@
 body {
     font-family: 'Titillium Web', sans-serif !important;
     overflow-x: hidden;
+    transform: invert(1);
 
     .sticky {
         position: fixed;
+        width: 100%;
         top: 0;
+        left: 0;
         padding-top: unset;
         display: inline-flex;
         height: 88px;
@@ -27,11 +36,20 @@ body {
     #chartArea {
         position: relative;
         width: 100%;
-        min-height: 380px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin-right: 0;
+        max-height: 70vh;
+        min-height: 73vh;
         padding: unset;
-        top: 50px;
         display: block;
         left: 0;
+        top: 92px;
+        border-left: 1px inset rgba(255, 255, 255, 0.3);
+
+        &:last-of-type {
+            bottom: 10%;
+        }
     }
 
     .chartWrapper {
@@ -39,12 +57,20 @@ body {
         padding: unset;
     }
 
-    background: #f2f2f2;
+    background: #$schuecoGrey;
     color: #444;
 
     img.logo {
         width: 88%;
         max-height: auto;
+    }
+
+    .bg-light {
+        background: #$schuecoGrey !important;
+    }
+
+    .navbar {
+        padding: 0 1rem;
     }
 
     .navbar-toggler {
@@ -60,6 +86,10 @@ body {
         padding: unset;
     }
 
+    .warningButton {
+        z-index: 999;
+    }
+
     .mapsWrapper {
 
         iframe {
@@ -68,19 +98,30 @@ body {
         }
     }
 
-    .statusIndicator {
+    .statusIndicator,
+    .liveIndicator {
         text-align: center;
-        width: 72px;
-        height: 72px;
+        width: $mainHeight;
+        height: $mainHeight;
         line-height: 82px;
         border-radius: 50%;
         border: 1px solid grey;
         border-radius: 50%;
-        animation: indicator .8s alternate infinite;
 
         i {
-            color: #FFF;
+            color: $background;
         }
+    }
+
+    .statusIndicator {
+        animation: indicator 2s alternate infinite;
+    }
+
+    .liveIndicator {
+        background: red;
+        animation: colorFade 6s infinite;
+        //background: #fc0101;
+        //background: #fc0101;
     }
 
     //Status
@@ -89,33 +130,31 @@ body {
 
         .statusWrapper {
             border: 1px solid rgba(0, 0, 0, .1);
-
             margin: 0 auto;
             padding: 15px;
             display: grid;
-            grid-row: 72px;
-            grid-template-columns: 72px 1fr;
+            grid-row: $mainHeight;
+            grid-template-columns: $mainHeight 36.5% $mainHeight 1fr $mainHeight;
             grid-gap: 15px;
 
             p {
-                padding: 15px 0;
-                line-height: 20px;
-                font-size: 20px;
+                padding: unset;
+                line-height: 36px;
+                font-size: 24px;
                 margin-bottom: unset;
             }
         }
 
         .chatButton {
-            border: #78b928 !important;
+            border: $schuecoGreen !important;
             box-shadow: unset;
-            padding: 0;
             margin: 0 auto;
 
             a {
                 height: 32px;
                 border: transparent;
                 box-shadow: unset;
-                background: #78b928;
+                background: $schuecoGreen;
             }
         }
     }
@@ -131,13 +170,13 @@ body {
         }
 
         .errorWrapper {
-            background: #f2f2f2;
+            background: #$schuecoGrey;
             width: 100%;
         }
 
         .img-circle {
             border-radius: 50%;
-            width: 72px;
+            width: $mainHeight;
             max-height: auto;
             margin: 0 15px;
         }
@@ -170,8 +209,10 @@ body {
         }
 
         .text-muted {
-            right: 1rem;
+            right: 4%;
+            top: -3.8em;
             position: relative;
+            z-index: 999;
         }
 
         .panel-body {
@@ -183,28 +224,37 @@ body {
         }
 
         .input-group {
-            height: 72px;
-            background: #FFF;
+            height: $mainHeight;
+            background: $background;
         }
 
         .btn-chat {
-            height: 72px;
+            height: $mainHeight;
             border-radius: unset;
         }
 
     }
 
     .btn-schuecoGreen {
-        color: #fff;
+        color: $background;
         border-radius: unset !important;
-        background-color: #78b928;
+        background-color: $schuecoGreen;
         border: transparent;
-        height: 64px;
+        height: $mainHeight;
         line-height: 48px;
 
         &:focus {
             box-shadow: unset !important;
         }
+    }
+
+    .poweredByAbis {
+        font-size: 13px;
+        color: rgba(0, 0, 0, 0.3);
+        position: fixed;
+        right: -42.55em;
+        top: 18.75vh;
+        z-index: 9999999;
     }
 
     .pull-right {
@@ -218,24 +268,52 @@ body {
     .stickyControll {
         position: fixed;
         bottom: 0;
-        width: 67%;
+        width: -webkit-fill-available;
+        display: table;
+        margin: 0 auto;
+
+        .container {
+            margin: unset;
+        }
     }
 
     .productLabel {
-        color: #78b928;
+        color: $schuecoGreen;
         font-weight: 100;
         letter-spacing: 1px;
     }
 
     .chart-widget {
+        font-family: 'Titillium Web', sans-serif !important;
         display: block;
-        width: 98%;
-        margin-left: -38px;
-        margin-top: 13vh;
+        padding: unset;
+        margin: 0 auto;
+        left: .8em;
+        position: relative;
+        width: -webkit-fill-available;
+
+        &:last-of-type {
+            margin-bottom: 10vh;
+        }
     }
 
     .effectBlendIn {
         animation: blendIn 1s infinite;
+    }
+
+    .warningWrapper {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        z-index: 99999999;
+        letter-spacing: 2px;
+        z-index: 999;
+        height: $mainHeight;
+        font-size: 12px;
+        padding: 8px 23px;
+        line-height: 66px;
+        background: $schuecoGreen;
+        color: #f5f5f5;
     }
 
     @keyframes blendIn {
@@ -248,16 +326,34 @@ body {
         }
     }
 
+    @keyframes colorFade {
+        5% {
+            background: green;
+        }
+
+        50% {
+            background: orange;
+        }
+
+        75% {
+            background: red;
+        }
+    }
+
     @keyframes indicator {
         from {
-            background: #78b928;
+            background: $schuecoGreen;
             border: #fc0101;
         }
 
         to {
             transform: #fc0101;
-            border: #78b928;
+            border: $schuecoGreen;
         }
+    }
+
+    .noMobile {
+        display: block;
     }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -267,21 +363,41 @@ body {
 
         .sticky {
             right: 0;
-        }
-
-        #chartArea {
-            width: 382px;
-            right: -15px;
+            width: 100%;
         }
 
         .chart-widget {
-            transform: scale(1.2);
-            margin-top: 13vh;
-            margin-left: 0vh;
-            bottom: 10vh;
-            left: -15px;
-            margin-right: auto;
-            width: 320px;
+            left: 10px;
+        }
+
+        .warningWrapper {
+            left: unset;
+        }
+
+        .noMobile {
+            display: none;
+        }
+
+        #status .statusWrapper {
+            grid-template-columns: $mainHeight 1fr $mainHeight $mainHeight;
+
+            p {
+                font-size: inherit;
+                line-height: 20px;
+            }
+        }
+
+        .downloadWrapper {
+            display: none;
+        }
+
+        .poweredByAbis {
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.2);
+            position: fixed;
+            right: -12em;
+            top: 30em;
+            z-index: 9999999;
         }
     }
 }

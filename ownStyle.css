@@ -143,7 +143,7 @@ body #status .statusWrapper p {
 }
 
 body #status .chatButton {
-  border: #78b928 !important;
+  border: #4bc920 !important;
   -webkit-box-shadow: unset;
           box-shadow: unset;
   margin: 0 auto;
@@ -154,7 +154,7 @@ body #status .chatButton a {
   border: transparent;
   -webkit-box-shadow: unset;
           box-shadow: unset;
-  background: #78b928;
+  background: #4bc920;
 }
 
 body #chat {
@@ -232,9 +232,9 @@ body #chat .btn-chat {
 }
 
 body .btn-schuecoGreen {
-  color: #fff;
+  color: #FFF;
   border-radius: unset !important;
-  background-color: #78b928;
+  background-color: #4bc920;
   border: transparent;
   height: 72px;
   line-height: 48px;
@@ -249,8 +249,8 @@ body .poweredByAbis {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.3);
   position: absolute;
-  right: -42.55em;
-  top: 18.75vh;
+  top: 1.82em;
+  right: 40.6vw;
   z-index: 9999999;
 }
 
@@ -266,6 +266,7 @@ body .stickyControll {
   position: fixed;
   bottom: 0;
   width: -webkit-fill-available;
+  display: table;
   margin: 0 auto;
 }
 
@@ -274,7 +275,7 @@ body .stickyControll .container {
 }
 
 body .productLabel {
-  color: #78b928;
+  color: #4bc920;
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -311,7 +312,7 @@ body .warningWrapper {
   font-size: 12px;
   padding: 8px 23px;
   line-height: 66px;
-  background: #78b928;
+  background: #4bc920;
   color: #f5f5f5;
 }
 
@@ -363,25 +364,25 @@ body .warningWrapper {
 
 @-webkit-keyframes indicator {
   from {
-    background: #78b928;
+    background: #4bc920;
     border: #fc0101;
   }
   to {
     -webkit-transform: #fc0101;
             transform: #fc0101;
-    border: #78b928;
+    border: #4bc920;
   }
 }
 
 @keyframes indicator {
   from {
-    background: #78b928;
+    background: #4bc920;
     border: #fc0101;
   }
   to {
     -webkit-transform: #fc0101;
             transform: #fc0101;
-    border: #78b928;
+    border: #4bc920;
   }
 }
 
@@ -418,12 +419,8 @@ body .noMobile {
     display: none;
   }
   body .poweredByAbis {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    right: -13.55em;
-    top: 25.75vh;
-    z-index: 9999999;
+    top: 1.8em;
+    right: 6.4vw;
   }
 }
 /*# sourceMappingURL=ownStyle.css.map */

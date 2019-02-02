@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 
 // global Vars for CI
-$schuecoGreen: $schuecoGreen;
+$schuecoGreen: #4bc920;
 $schuecoGrey: #f2f2f2;
-$background: $backgroundFFF;
-$mainHeight: $mainHeight;
+$background: #FFF;
+$mainHeight: 72px;
 
 :root {
     font-family: 'Titillium Web', sans-serif;
@@ -57,7 +57,7 @@ body {
         padding: unset;
     }
 
-    background: #$schuecoGrey;
+    background: $schuecoGrey;
     color: #444;
 
     img.logo {
@@ -66,7 +66,7 @@ body {
     }
 
     .bg-light {
-        background: #$schuecoGrey !important;
+        background: $schuecoGrey !important;
     }
 
     .navbar {
@@ -170,7 +170,7 @@ body {
         }
 
         .errorWrapper {
-            background: #$schuecoGrey;
+            background:$schuecoGrey;
             width: 100%;
         }
 
@@ -251,9 +251,9 @@ body {
     .poweredByAbis {
         font-size: 13px;
         color: rgba(0, 0, 0, 0.3);
-        position: fixed;
-        right: -42.55em;
-        top: 18.75vh;
+        position: absolute;
+        top: 1.82em;
+        right: 40.6vw;
         z-index: 9999999;
     }
 
@@ -392,12 +392,8 @@ body {
         }
 
         .poweredByAbis {
-            font-size: 10px;
-            color: rgba(0, 0, 0, 0.2);
-            position: fixed;
-            right: -12em;
-            top: 30em;
-            z-index: 9999999;
+            top: 1.8em;
+            right: 6.4vw;
         }
     }
 }
