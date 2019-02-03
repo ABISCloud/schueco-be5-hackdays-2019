@@ -65,21 +65,36 @@ $(() => {
 
         setTimeout(() => {
             if (!tempChart) {
-                tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
+                tempChart = new Chart(property.sensors['ambient_temperature'], (notificationSensor, diff) => {
                     // alert(notificationSensor.name + " reported an issue");
+
+                    if (diff < 0) {
+
+                    } else if (diff > 0) {
+
+                    }
 
                     switch(notificationSensorStatus) {
                         case '1':
-                            indicatorEl = 'greenGood';
+                            Array.from(indicatorEl.classList.entries()).forEach(o => indicatorEl.classList.remove(o));
+                            indicatorEl.classList.add('liveIndicator');
+                            indicatorEl.classList.add('greenGood');
                         break;
                         case '2':
-                            indicatorEl = 'yellowModarte';
+                            Array.from(indicatorEl.classList.entries()).forEach(o => indicatorEl.classList.remove(o));
+                            indicatorEl.classList.add('liveIndicator');
+                            indicatorEl.classList.add('yellowModarte');
                         break;
                         case '3':
-                            indicatorEl = 'criticalRed';
+                            Array.from(indicatorEl.classList.entries()).forEach(o => indicatorEl.classList.remove(o));
+                            indicatorEl.classList.add('liveIndicator');
+                            indicatorEl.classList.add('criticalRed');
                         break;
                         default:
-                            indicatorEl = 'greenGood';
+                            Array.from(indicatorEl.classList.entries()).forEach(o => indicatorEl.classList.remove(o));
+                            indicatorEl.classList.add('liveIndicator');
+                            indicatorEl.classList.add('criticalRed');
+                            break;
                     }
                 });
                 tempChart.attach(chartArea.id);
