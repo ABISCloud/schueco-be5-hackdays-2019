@@ -55,27 +55,30 @@ $(() => {
     };
 
     let tempChart = null;
-    let noiseChart = null;
+    let humidChart = null;
+    let windspeedChart = null;
 
     property.connect(() => {
         updateSensorDropDown();
 
-        if (!tempChart) {
-            tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
-                alert(notificationSensor.name + " reported an issue");
-            });
-            tempChart.attach(chartArea.id);
+        setTimeout(() => {
+            if (!tempChart) {
+                tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
+                    alert(notificationSensor.name + " reported an issue");
+                });
+                tempChart.attach(chartArea.id);
+            }
 
-        }
+            if (!humidChart) {
+                humidChart = new Chart(property.sensors['userdefined_double_2'], null, 'rel_humidity');
+                humidChart.attach(chartArea.id);
+            }
 
-        /*
-        if (!noiseChart) {
-            noiseChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
-                alert(notificationSensor.name + " reported an issue");
-            });
-            noiseChart.attach(chartArea.id);
-        }
-        */
+            if (!windspeedChart) {
+                windspeedChart = new Chart(property.sensors['wind_speed']);
+                windspeedChart.attach(chartArea.id);
+            }
+        }, 75);
     });
 });
 
