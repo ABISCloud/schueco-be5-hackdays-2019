@@ -57,12 +57,28 @@ $(() => {
     let tempChart = null;
     let noiseChart = null;
 
+    let notificationSensorStatus = notificationSensor.name; //
+    let indicatorEl = document.getElementsByClassName('liveIndicator')[0];
+
     property.connect(() => {
         updateSensorDropDown();
 
         if (!tempChart) {
             tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
-                alert(notificationSensor.name + " reported an issue");
+                switch(notificationSensorStatus, indicatorEl) {
+                    case '1':
+                        indicatorEl = 'greenGood';
+                    break;
+                    case '2':
+                        indicatorEl = 'yellowModarte';
+                    break;
+                    case '3':
+                        indicatorEl = 'criticalRed';
+                    break;
+                    default:
+                        indicatorEl = 'greenGood';
+                }
+
             });
             tempChart.attach(chartArea.id);
 
