@@ -116,5 +116,5 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
 
     setTimeout(() => {
         selectionChanged(window.bimSurfer, '47#product-6b61ce71-1a7a-473c-8f87-4262e0bdb448-body.entity.0.0', Utils);
-    }, 2000)
+    }, 5000)
 });
