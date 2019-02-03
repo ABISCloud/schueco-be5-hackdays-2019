@@ -23,6 +23,7 @@ function selectionChanged(bimsurfer, id, Utils, dontSelect) {
     return id;
 }
 
+/*
 function populateSensorList (bimSurfer, property, map, Utils) {
     let sensorList = document.getElementById("sensorList");
     if (sensorList) {
@@ -45,13 +46,13 @@ function populateSensorList (bimSurfer, property, map, Utils) {
         });
     }
 }
+*/
 require([
     "bimsurfer/src/BimSurfer",
     "bimsurfer/src/StaticTreeRenderer",
     "bimsurfer/src/MetaDataRenderer",
     "bimsurfer/src/Request",
     "bimsurfer/src/Utils",
-    "examples/lib/Chart",
     "examples/lib/Property",
     "examples/lib/PropertyConnection",
     "examples/lib/Sensor",
@@ -65,9 +66,9 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     let property = new Property(221);
     property.connect();
 
-    property.connection.registerMessageCallback("", o => {
+    /*property.connection.registerMessageCallback("", o => {
         populateSensorList(bimSurfer, property, map, Utils);
-    });
+    });*/
     
     var modelName = window.location.hash;
     if (modelName.length < 1) {
@@ -112,4 +113,8 @@ function (BimSurfer, StaticTreeRenderer, MetaDataRenderer, Request, Utils) {
     
     // Lets us play with the Surfer in the console
     window.bimSurfer = bimSurfer;
+
+    setTimeout(() => {
+        selectionChanged(window.bimSurfer, '47#product-6b61ce71-1a7a-473c-8f87-4262e0bdb448-body.entity.0.0', Utils);
+    }, 2000)
 });
