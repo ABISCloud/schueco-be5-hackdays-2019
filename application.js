@@ -5,6 +5,23 @@ let valueNameSelect = null;
 let selectedSensorName = null;
 let selectedSensor = null;
 
+let messages = {
+    "rel_humidity":{
+
+    },
+    "ambient_temperature":{
+
+    },
+    "noise":{
+
+    }
+};
+
+
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 $(() => {
     property = new Property(221);
     time = document.getElementById("time");
@@ -18,11 +35,6 @@ $(() => {
         valueNameSelect.innerHTML = options.map(o => {
             // TODO: Duplicate code
             let label = o;
-            switch (label) {
-                case "userdefined_double_1": label = "rain_intensity"; break;
-                case "userdefined_double_2": label = "rel_humidity"; break;
-                case "userdefined_double_3": label = "air_pressure";  break;
-            }
             if (o === selectedSensorName) {
                 return "<option disabled selected value=\"\">" + label + "</option>"
             } else {
@@ -42,16 +54,28 @@ $(() => {
         updateSensorDropDown();
     };
 
-    let chart = null;
+    let tempChart = null;
+    let noiseChart = null;
 
     property.connect(() => {
         updateSensorDropDown();
-        if (!chart) {
-            chart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
+
+        if (!tempChart) {
+            tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
                 alert(notificationSensor.name + " reported an issue");
             });
-            chart.attach(chartArea.id);
+            tempChart.attach(chartArea.id);
+
         }
+
+        /*
+        if (!noiseChart) {
+            noiseChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
+                alert(notificationSensor.name + " reported an issue");
+            });
+            noiseChart.attach(chartArea.id);
+        }
+        */
     });
 });
 
