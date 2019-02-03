@@ -47,7 +47,9 @@ $(() => {
     property.connect(() => {
         updateSensorDropDown();
         if (!chart) {
-            chart = new Chart(property.sensors['ambient_temperature']);
+            chart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
+                alert(notificationSensor.name + " reported an issue");
+            });
             chart.attach(chartArea.id);
         }
     });
