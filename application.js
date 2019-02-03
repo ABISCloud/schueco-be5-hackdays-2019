@@ -96,6 +96,7 @@ $(() => {
                             indicatorEl.classList.add('criticalRed');
                             break;
                     }
+                    $(".panel-collapse").collapse("show");
                 });
                 tempChart.attach(chartArea.id);
             }
