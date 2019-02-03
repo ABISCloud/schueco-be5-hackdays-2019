@@ -248,9 +248,9 @@ body .btn-schuecoGreen:focus {
 body .poweredByAbis {
   font-size: 13px;
   color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  top: 1.82em;
-  right: 40.6vw;
+  position: relative;
+  top: .7em;
+  left: -4.44em;
   z-index: 9999999;
 }
 
@@ -421,7 +421,7 @@ body .noMobile {
     display: none;
   }
   body .poweredByAbis {
-    top: 1.8em;
+    top: .7em;
     right: 6.4vw;
   }
 }

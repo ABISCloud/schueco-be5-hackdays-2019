@@ -107,7 +107,6 @@ body {
         border-radius: 50%;
         border: 1px solid grey;
         border-radius: 50%;
-
         i {
             color: $background;
         }
@@ -119,9 +118,19 @@ body {
 
     .liveIndicator {
         background: red;
-        animation: colorFade 6s infinite;
-        //background: #fc0101;
-        //background: #fc0101;
+        transition: background 1s alternate;
+
+        .greenGood {
+            background: green;
+        }
+
+        .yellowModerate {
+            background: #f6a82e;
+        }
+
+        .redCritical {
+            background: #ed0000;
+        }
     }
 
     //Status
@@ -251,9 +260,9 @@ body {
     .poweredByAbis {
         font-size: 13px;
         color: rgba(0, 0, 0, 0.3);
-        position: absolute;
-        top: 1.82em;
-        right: 40.6vw;
+        position: relative;
+        top: .7em;
+        left: -4.44em;
         z-index: 9999999;
     }
 
@@ -326,7 +335,7 @@ body {
         }
     }
 
-    @keyframes colorFade {
+    /* @keyframes colorFade {
         5% {
             background: green;
         }
@@ -338,7 +347,7 @@ body {
         75% {
             background: red;
         }
-    }
+    } */
 
     @keyframes indicator {
         from {
@@ -392,7 +401,7 @@ body {
         }
 
         .poweredByAbis {
-            top: 1.8em;
+            top: .7em;
             right: 6.4vw;
         }
     }
