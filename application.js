@@ -69,9 +69,9 @@ $(() => {
                     // alert(notificationSensor.name + " reported an issue");
 
                     if (diff < 0) {
-
+                        notificationSensorStatus = '2';
                     } else if (diff > 0) {
-
+                        notificationSensorStatus = '3';
                     }
 
                     switch(notificationSensorStatus) {
