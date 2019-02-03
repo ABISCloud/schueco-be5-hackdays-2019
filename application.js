@@ -17,7 +17,6 @@ let messages = {
     }
 };
 
-
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -55,7 +54,8 @@ $(() => {
     };
 
     let tempChart = null;
-    let noiseChart = null;
+    let humidChart = null;
+    let windspeedChart = null;
 
     let notificationSensorStatus = notificationSensor.name; //
     let indicatorEl = document.getElementsByClassName('liveIndicator')[0];
@@ -63,35 +63,38 @@ $(() => {
     property.connect(() => {
         updateSensorDropDown();
 
-        if (!tempChart) {
-            tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
-                switch(notificationSensorStatus, indicatorEl) {
-                    case '1':
-                        indicatorEl = 'greenGood';
-                    break;
-                    case '2':
-                        indicatorEl = 'yellowModarte';
-                    break;
-                    case '3':
-                        indicatorEl = 'criticalRed';
-                    break;
-                    default:
-                        indicatorEl = 'greenGood';
-                }
+        setTimeout(() => {
+            if (!tempChart) {
+                tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
+                    // alert(notificationSensor.name + " reported an issue");
 
-            });
-            tempChart.attach(chartArea.id);
+                    switch(notificationSensorStatus, indicatorEl) {
+                        case '1':
+                            indicatorEl = 'greenGood';
+                        break;
+                        case '2':
+                            indicatorEl = 'yellowModarte';
+                        break;
+                        case '3':
+                            indicatorEl = 'criticalRed';
+                        break;
+                        default:
+                            indicatorEl = 'greenGood';
+                    }
+                });
+                tempChart.attach(chartArea.id);
+            }
 
-        }
+            if (!humidChart) {
+                humidChart = new Chart(property.sensors['userdefined_double_2'], null, 'rel_humidity');
+                humidChart.attach(chartArea.id);
+            }
 
-        /*
-        if (!noiseChart) {
-            noiseChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
-                alert(notificationSensor.name + " reported an issue");
-            });
-            noiseChart.attach(chartArea.id);
-        }
-        */
+            if (!windspeedChart) {
+                windspeedChart = new Chart(property.sensors['wind_speed']);
+                windspeedChart.attach(chartArea.id);
+            }
+        }, 75);
     });
 });
 
