@@ -55,7 +55,6 @@ $(() => {
     });
 });
 
-
 function addChart() {
     if (!selectedSensor || !chartArea) {
         return;
