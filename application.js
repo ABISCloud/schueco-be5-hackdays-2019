@@ -57,7 +57,7 @@ $(() => {
     let humidChart = null;
     let windspeedChart = null;
 
-    let notificationSensorStatus = notificationSensor.name; //
+    let notificationSensorStatus = "1";
     let indicatorEl = document.getElementsByClassName('liveIndicator')[0];
 
     property.connect(() => {
@@ -68,7 +68,7 @@ $(() => {
                 tempChart = new Chart(property.sensors['ambient_temperature'], notificationSensor => {
                     // alert(notificationSensor.name + " reported an issue");
 
-                    switch(notificationSensorStatus, indicatorEl) {
+                    switch(notificationSensorStatus) {
                         case '1':
                             indicatorEl = 'greenGood';
                         break;
