@@ -97,6 +97,16 @@ $(() => {
                             break;
                     }
                     $(".panel-collapse").collapse("show");
+
+
+                    setTimeout(() => {
+
+
+                        let mapframe = document.getElementById('mapframe');
+                        mapframe.src = "https://dbianalytics.github.io/schueco-be5-hackdays-2019/bim/examples/gltf.html";
+
+                        //selectionChanged(window.bimSurfer, '47#product-6b61ce71-1a7a-473c-8f87-4262e0bdb448-body.entity.0.0', Utils);
+                    }, 5000)
                 });
                 tempChart.attach(chartArea.id);
             }
