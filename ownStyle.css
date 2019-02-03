@@ -10,6 +10,19 @@ body {
           transform: invert(1);
   background: #f2f2f2;
   color: #444;
+  /* @keyframes colorFade {
+        5% {
+            background: green;
+        }
+
+        50% {
+            background: orange;
+        }
+
+        75% {
+            background: red;
+        }
+    } */
 }
 
 body .sticky {
@@ -114,8 +127,20 @@ body .statusIndicator {
 
 body .liveIndicator {
   background: red;
-  -webkit-animation: colorFade 6s infinite;
-          animation: colorFade 6s infinite;
+  -webkit-transition: background 1s alternate;
+  transition: background 1s alternate;
+}
+
+body .liveIndicator .greenGood {
+  background: green;
+}
+
+body .liveIndicator .yellowModerate {
+  background: #f6a82e;
+}
+
+body .liveIndicator .redCritical {
+  background: #ed0000;
 }
 
 body #status {
@@ -337,30 +362,6 @@ body .warningWrapper {
   to {
     -webkit-transform: translateY(100%);
             transform: translateY(100%);
-  }
-}
-
-@-webkit-keyframes colorFade {
-  5% {
-    background: green;
-  }
-  50% {
-    background: orange;
-  }
-  75% {
-    background: red;
-  }
-}
-
-@keyframes colorFade {
-  5% {
-    background: green;
-  }
-  50% {
-    background: orange;
-  }
-  75% {
-    background: red;
   }
 }
 
