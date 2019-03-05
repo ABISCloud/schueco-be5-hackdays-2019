@@ -4,6 +4,7 @@
 }
 
 body {
+  background: #333 !important;
   font-family: 'Titillium Web', sans-serif !important;
   overflow-x: hidden;
   -webkit-transform: invert(1);
@@ -80,6 +81,7 @@ body .bg-light {
 
 body .navbar {
   padding: 0 1rem;
+  background: #444 !important;
 }
 
 body .navbar-toggler {
@@ -117,7 +119,7 @@ body .liveIndicator {
 
 body .statusIndicator i,
 body .liveIndicator i {
-  color: #FFF;
+  color: #333;
 }
 
 body .statusIndicator {
@@ -144,6 +146,8 @@ body .liveIndicator .redCritical {
 }
 
 body #status {
+  background: #333 !important;
+  color: #f5f5f5;
   padding: unset;
 }
 
@@ -193,8 +197,9 @@ body #chat .chat {
 }
 
 body #chat .errorWrapper {
-  background: #f2f2f2;
+  background: #222;
   width: 100%;
+  color: #f2f2f2;
 }
 
 body #chat .img-circle {
@@ -248,7 +253,7 @@ body #chat .panel-footer {
 
 body #chat .input-group {
   height: 72px;
-  background: #FFF;
+  background: #333;
 }
 
 body #chat .btn-chat {
@@ -257,7 +262,7 @@ body #chat .btn-chat {
 }
 
 body .btn-schuecoGreen {
-  color: #FFF;
+  color: #333;
   border-radius: unset !important;
   background-color: #4bc920;
   border: transparent;
@@ -272,10 +277,10 @@ body .btn-schuecoGreen:focus {
 
 body .poweredByAbis {
   font-size: 13px;
-  color: rgba(0, 0, 0, 0.3);
-  position: relative;
-  top: .7em;
-  left: -4.44em;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 89px;
+  left: 47.9%;
   z-index: 9999999;
 }
 
