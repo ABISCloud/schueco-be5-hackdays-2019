@@ -154,6 +154,7 @@ body #status {
 body #status .statusWrapper {
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  background: #111;
   padding: 15px;
   display: -ms-grid;
   display: grid;
