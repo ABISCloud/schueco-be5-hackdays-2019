@@ -3,7 +3,7 @@
 // global Vars for CI
 $schuecoGreen: #4bc920;
 $schuecoGrey: #f2f2f2;
-$background: #FFF;
+$background: #333;
 $mainHeight: 72px;
 
 :root {
@@ -11,9 +11,11 @@ $mainHeight: 72px;
 }
 
 body {
+    background: $background !important;
     font-family: 'Titillium Web', sans-serif !important;
     overflow-x: hidden;
     transform: invert(1);
+
 
     .sticky {
         position: fixed;
@@ -71,6 +73,7 @@ body {
 
     .navbar {
         padding: 0 1rem;
+        background: #444 !important;
     }
 
     .navbar-toggler {
@@ -135,11 +138,14 @@ body {
 
     //Status
     #status {
+        background: $background !important;
+        color: #f5f5f5;
         padding: unset;
 
         .statusWrapper {
             border: 1px solid rgba(0, 0, 0, .1);
             margin: 0 auto;
+            background: #111;
             padding: 15px;
             display: grid;
             grid-row: $mainHeight;
@@ -179,8 +185,9 @@ body {
         }
 
         .errorWrapper {
-            background:$schuecoGrey;
+            background:#222;
             width: 100%;
+            color: $schuecoGrey;
         }
 
         .img-circle {
@@ -259,10 +266,10 @@ body {
 
     .poweredByAbis {
         font-size: 13px;
-        color: rgba(0, 0, 0, 0.3);
-        position: relative;
-        top: .7em;
-        left: -4.44em;
+        color: rgba(255,255,255, 0.6);
+        position: absolute;
+        top: 89px;
+        left: 47.9%;
         z-index: 9999999;
     }
 
@@ -401,8 +408,8 @@ body {
         }
 
         .poweredByAbis {
-            top: .7em;
-            right: 6.4vw;
+            top: 6.9em;
+            right: 18.4vw;
         }
     }
 }

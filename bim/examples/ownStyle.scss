@@ -2,6 +2,7 @@
 
 // global Vars for CI
 $schuecoGreen: $schuecoGreen;
+$pzmGreen: #8fdd3c;
 $schuecoGrey: #f2f2f2;
 $background: $backgroundFFF;
 $mainHeight: $mainHeight;
@@ -146,7 +147,7 @@ body {
         }
 
         .chatButton {
-            border: $schuecoGreen !important;
+            border: $pzmGreen !important;
             box-shadow: unset;
             margin: 0 auto;
 
@@ -154,7 +155,7 @@ body {
                 height: 32px;
                 border: transparent;
                 box-shadow: unset;
-                background: $schuecoGreen;
+                background: $pzmGreen;
             }
         }
     }
@@ -238,7 +239,7 @@ body {
     .btn-schuecoGreen {
         color: $background;
         border-radius: unset !important;
-        background-color: $schuecoGreen;
+        background-color: $pzmGreen;
         border: transparent;
         height: $mainHeight;
         line-height: 48px;
@@ -278,7 +279,7 @@ body {
     }
 
     .productLabel {
-        color: $schuecoGreen;
+        color: $pzmGreen;
         font-weight: 100;
         letter-spacing: 1px;
     }
@@ -312,8 +313,8 @@ body {
         font-size: 12px;
         padding: 8px 23px;
         line-height: 66px;
-        background: $schuecoGreen;
-        color: #f5f5f5;
+        background: $pzmGreen;
+        color: #333;
     }
 
     @keyframes blendIn {
@@ -342,13 +343,13 @@ body {
 
     @keyframes indicator {
         from {
-            background: $schuecoGreen;
+            background: $pzmGreen;
             border: #fc0101;
         }
 
         to {
             transform: #fc0101;
-            border: $schuecoGreen;
+            border: $pzmGreen;
         }
     }
 
