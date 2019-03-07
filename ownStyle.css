@@ -408,7 +408,7 @@ body .noMobile {
     width: 100%;
   }
   body .chart-widget {
-    left: 10px;
+    left: 0;
   }
   body .warningWrapper {
     left: unset;
