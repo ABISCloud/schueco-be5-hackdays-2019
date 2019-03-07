@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 
 // global Vars for CI
-$schuecoGreen: #4bc920;
-$schuecoGrey: #f2f2f2;
+$pzmgreen: #8fdd3c;
+$pzmwhite: #f2f2f2;
 $background: #333;
 $mainHeight: 72px;
 
@@ -59,7 +59,7 @@ body {
         padding: unset;
     }
 
-    background: $schuecoGrey;
+    background: $pzmwhite;
     color: #444;
 
     img.logo {
@@ -68,7 +68,7 @@ body {
     }
 
     .bg-light {
-        background: $schuecoGrey !important;
+        background: $pzmwhite !important;
     }
 
     .navbar {
@@ -108,14 +108,15 @@ body {
         height: $mainHeight;
         line-height: 82px;
         border-radius: 50%;
-        border: 1px solid grey;
+        border: 1px solid $pzmgreen;
         border-radius: 50%;
         i {
-            color: $background;
+            color: #f5f5f5;
         }
     }
 
     .statusIndicator {
+        border: 1px solid #f5f5f5 !important;
         animation: indicator 2s alternate infinite;
     }
 
@@ -161,7 +162,7 @@ body {
         }
 
         .chatButton {
-            border: $schuecoGreen !important;
+            border: $pzmgreen !important;
             box-shadow: unset;
             margin: 0 auto;
 
@@ -169,7 +170,7 @@ body {
                 height: 32px;
                 border: transparent;
                 box-shadow: unset;
-                background: $schuecoGreen;
+                background: $pzmgreen;
             }
         }
     }
@@ -187,7 +188,7 @@ body {
         .errorWrapper {
             background:#222;
             width: 100%;
-            color: $schuecoGrey;
+            color: $pzmwhite;
         }
 
         .img-circle {
@@ -251,10 +252,10 @@ body {
 
     }
 
-    .btn-schuecoGreen {
+    .btn-pzmgreen {
         color: $background;
         border-radius: unset !important;
-        background-color: $schuecoGreen;
+        background-color: $pzmgreen;
         border: transparent;
         height: $mainHeight;
         line-height: 48px;
@@ -294,7 +295,7 @@ body {
     }
 
     .productLabel {
-        color: $schuecoGreen;
+        color: $pzmgreen;
         font-weight: 100;
         letter-spacing: 1px;
     }
@@ -328,7 +329,7 @@ body {
         font-size: 12px;
         padding: 8px 23px;
         line-height: 66px;
-        background: $schuecoGreen;
+        background: $pzmgreen;
         color: #f5f5f5;
     }
 
@@ -358,13 +359,11 @@ body {
 
     @keyframes indicator {
         from {
-            background: $schuecoGreen;
-            border: #fc0101;
+            background: $pzmgreen;
         }
 
         to {
             transform: #fc0101;
-            border: $schuecoGreen;
         }
     }
 

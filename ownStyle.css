@@ -113,16 +113,17 @@ body .liveIndicator {
   height: 72px;
   line-height: 82px;
   border-radius: 50%;
-  border: 1px solid grey;
+  border: 1px solid #8fdd3c;
   border-radius: 50%;
 }
 
 body .statusIndicator i,
 body .liveIndicator i {
-  color: #333;
+  color: #f5f5f5;
 }
 
 body .statusIndicator {
+  border: 1px solid #f5f5f5 !important;
   -webkit-animation: indicator 2s alternate infinite;
           animation: indicator 2s alternate infinite;
 }
@@ -374,24 +375,20 @@ body .warningWrapper {
 @-webkit-keyframes indicator {
   from {
     background: #4bc920;
-    border: #fc0101;
   }
   to {
     -webkit-transform: #fc0101;
             transform: #fc0101;
-    border: #4bc920;
   }
 }
 
 @keyframes indicator {
   from {
     background: #4bc920;
-    border: #fc0101;
   }
   to {
     -webkit-transform: #fc0101;
             transform: #fc0101;
-    border: #4bc920;
   }
 }
 
